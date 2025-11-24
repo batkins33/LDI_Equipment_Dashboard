@@ -22,6 +22,14 @@ from startup_analyzer import StartupAnalyzer
 from storage_sense import StorageSense
 from process_explainer import ProcessExplainer
 
+# Phase 2: Action modules
+try:
+    from actions.browser_actions import BrowserCleaner
+    ACTIONS_AVAILABLE = True
+except ImportError:
+    ACTIONS_AVAILABLE = False
+    BrowserCleaner = None
+
 try:
     from colorama import init, Fore, Style
     init(autoreset=True)
@@ -45,6 +53,12 @@ class SysPulse:
         self.startup_analyzer = StartupAnalyzer()
         self.storage_sense = StorageSense()
         self.process_explainer = ProcessExplainer()
+
+        # Phase 2: Action modules
+        if ACTIONS_AVAILABLE:
+            self.browser_cleaner = BrowserCleaner()
+        else:
+            self.browser_cleaner = None
 
     def print_header(self, text: str):
         """Print section header"""
@@ -97,6 +111,112 @@ class SysPulse:
             print(f"  Extensions: {data['extensions_count']}")
             print(f"  {Fore.CYAN}→ {data['recommendation']}{Style.RESET_ALL}")
             print()
+
+    def run_browser_cleanup(self, dry_run: bool = False, target_profile: str = None):
+        """Run browser cache cleanup with confirmation"""
+        if not ACTIONS_AVAILABLE or not self.browser_cleaner:
+            print(f"{Fore.RED}Error: Browser cleanup module not available{Style.RESET_ALL}")
+            return
+
+        self.print_header("Browser Cache Cleanup" + (" [DRY RUN]" if dry_run else ""))
+
+        # Scan profiles first
+        print("Scanning browser profiles...")
+        profiles = self.browser_scanner.scan_all()
+
+        if not profiles:
+            print(f"{Fore.YELLOW}No browser profiles found.{Style.RESET_ALL}")
+            return
+
+        # Filter profiles that should be cleaned
+        profiles_to_clean = []
+        for profile in profiles:
+            data = profile.to_dict()
+
+            # If target profile specified, only clean that one
+            if target_profile and data['name'] != target_profile:
+                continue
+
+            # Only suggest cleaning profiles with recommendations
+            if any(keyword in data['recommendation'] for keyword in ['consider cleaning', 'recommend clearing', 'safe to delete']):
+                profiles_to_clean.append(data)
+
+        if not profiles_to_clean:
+            print(f"{Fore.GREEN}No profiles need cleaning!{Style.RESET_ALL}")
+            return
+
+        # Show what will be cleaned
+        print(f"\n{Fore.YELLOW}Profiles to clean:{Style.RESET_ALL}\n")
+
+        total_to_free = 0
+        for idx, profile_data in enumerate(profiles_to_clean, 1):
+            print(f"{idx}. [{profile_data['browser']}] {profile_data['name']}")
+            print(f"   Cache: {profile_data['cache_size_human']}")
+            print(f"   {profile_data['recommendation']}")
+            total_to_free += profile_data['cache_size_mb'] * 1024 * 1024
+
+        print(f"\n{Fore.CYAN}Total space to free: {self._human_size(total_to_free)}{Style.RESET_ALL}")
+
+        # Confirm (unless dry run)
+        if not dry_run:
+            print(f"\n{Fore.YELLOW}⚠ WARNING: This will delete cache files from the above profiles.{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}Bookmarks, passwords, history, and extensions will NOT be affected.{Style.RESET_ALL}\n")
+
+            response = input(f"Continue? (yes/no): ").strip().lower()
+
+            if response != 'yes':
+                print(f"\n{Fore.CYAN}Cleanup cancelled.{Style.RESET_ALL}")
+                return
+
+        # Execute cleanup
+        print(f"\n{Fore.CYAN}{'Simulating' if dry_run else 'Executing'} cleanup...{Style.RESET_ALL}\n")
+
+        results = self.browser_cleaner.clear_multiple_profiles(profiles_to_clean, dry_run=dry_run)
+
+        # Show results
+        for result in results:
+            data = result.to_dict()
+
+            if data['success']:
+                status_color = Fore.GREEN
+                status = "✓" if not dry_run else "✓ (dry run)"
+            else:
+                status_color = Fore.RED
+                status = "✗"
+
+            print(f"{status_color}{status} [{data['browser']}] {data['profile_name']}{Style.RESET_ALL}")
+
+            if dry_run:
+                print(f"   Would delete: {data['files_deleted']} files")
+                print(f"   Would free: {data['bytes_freed_human']}")
+            else:
+                print(f"   Deleted: {data['files_deleted']} files")
+                print(f"   Freed: {data['bytes_freed_human']}")
+
+            if data['errors']:
+                print(f"   {Fore.YELLOW}Errors: {len(data['errors'])}{Style.RESET_ALL}")
+
+        # Summary
+        summary = self.browser_cleaner.get_cleanup_summary(results)
+
+        print(f"\n{Fore.GREEN}{Style.BRIGHT}Summary:{Style.RESET_ALL}")
+        print(f"Profiles cleaned: {summary['successful']}/{summary['total_profiles']}")
+
+        if dry_run:
+            print(f"Would free: {summary['total_bytes_freed_human']}")
+        else:
+            print(f"Total freed: {summary['total_bytes_freed_human']}")
+
+        if summary['errors']:
+            print(f"\n{Fore.YELLOW}Some errors occurred. Check ~/.syspulse/cleanup_log.json for details.{Style.RESET_ALL}")
+
+    def _human_size(self, size_bytes: int) -> str:
+        """Convert bytes to human-readable format"""
+        for unit in ['B', 'KB', 'MB', 'GB', 'TB']:
+            if size_bytes < 1024.0:
+                return f"{size_bytes:.1f} {unit}"
+            size_bytes /= 1024.0
+        return f"{size_bytes:.1f} PB"
 
     def run_startup_scan(self):
         """Run startup impact analyzer"""
@@ -248,6 +368,7 @@ Examples:
         """
     )
 
+    # Analysis options (Phase 1)
     parser.add_argument('--browsers', action='store_true',
                         help='Scan browser profiles only')
     parser.add_argument('--startup', action='store_true',
@@ -258,14 +379,24 @@ Examples:
                         help='Scan running processes only')
     parser.add_argument('--quick', action='store_true',
                         help='Quick scan (faster, less detailed)')
-    parser.add_argument('--version', action='version', version='SysPulse 1.0.0')
+
+    # Action options (Phase 2)
+    parser.add_argument('--clean-browser-cache', action='store_true',
+                        help='Clean browser cache (interactive with confirmation)')
+    parser.add_argument('--dry-run', action='store_true',
+                        help='Show what would be done without actually doing it')
+
+    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.1')
 
     args = parser.parse_args()
 
     app = SysPulse()
 
-    # If specific scan requested, run only that
-    if args.browsers:
+    # Phase 2: Action commands (take precedence)
+    if args.clean_browser_cache:
+        app.run_browser_cleanup(dry_run=args.dry_run)
+    # Phase 1: Analysis commands
+    elif args.browsers:
         app.run_browser_scan()
     elif args.startup:
         app.run_startup_scan()
