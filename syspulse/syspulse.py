@@ -12,7 +12,7 @@ over the things that actually impact your computer's performance.
 import sys
 import argparse
 from pathlib import Path
-from typing import Optional
+from typing import Optional, List
 
 # Add modules to path
 sys.path.insert(0, str(Path(__file__).parent / 'modules'))
@@ -25,10 +25,12 @@ from process_explainer import ProcessExplainer
 # Phase 2: Action modules
 try:
     from actions.browser_actions import BrowserCleaner
+    from actions.storage_actions import StorageCleaner
     ACTIONS_AVAILABLE = True
 except ImportError:
     ACTIONS_AVAILABLE = False
     BrowserCleaner = None
+    StorageCleaner = None
 
 try:
     from colorama import init, Fore, Style
@@ -57,8 +59,10 @@ class SysPulse:
         # Phase 2: Action modules
         if ACTIONS_AVAILABLE:
             self.browser_cleaner = BrowserCleaner()
+            self.storage_cleaner = StorageCleaner()
         else:
             self.browser_cleaner = None
+            self.storage_cleaner = None
 
     def print_header(self, text: str):
         """Print section header"""
@@ -217,6 +221,143 @@ class SysPulse:
                 return f"{size_bytes:.1f} {unit}"
             size_bytes /= 1024.0
         return f"{size_bytes:.1f} PB"
+
+    def run_storage_cleanup(self, dry_run: bool = False, categories: Optional[List[str]] = None):
+        """Run storage cleanup with confirmation"""
+        if not ACTIONS_AVAILABLE or not self.storage_cleaner:
+            print(f"{Fore.RED}Error: Storage cleanup module not available{Style.RESET_ALL}")
+            return
+
+        self.print_header("Storage Cleanup" + (" [DRY RUN]" if dry_run else ""))
+
+        # Define available cleanup categories
+        available_categories = {
+            'temp': ('Temp Files', lambda dr: self.storage_cleaner.clean_temp_files(dry_run=dr)),
+            'recycle': ('Recycle Bin', lambda dr: self.storage_cleaner.empty_recycle_bin(dry_run=dr)),
+            'downloads': ('Old Downloads (90+ days)', lambda dr: self.storage_cleaner.clean_old_downloads(days_old=90, dry_run=dr)),
+        }
+
+        # Add Windows-specific category
+        if self.storage_cleaner.system == "Windows":
+            available_categories['winupdate'] = (
+                'Windows Update Cache',
+                lambda dr: self.storage_cleaner.clean_windows_update_cache(dry_run=dr)
+            )
+
+        # If no categories specified, use all
+        if not categories:
+            categories = list(available_categories.keys())
+
+        # First, show what will be cleaned (always dry run first)
+        print("Analyzing storage...")
+        preview_results = []
+
+        for cat_key in categories:
+            if cat_key not in available_categories:
+                print(f"{Fore.YELLOW}Unknown category: {cat_key}{Style.RESET_ALL}")
+                continue
+
+            cat_name, cat_func = available_categories[cat_key]
+            result = cat_func(True)  # Always preview first
+            preview_results.append(result)
+
+        if not preview_results:
+            print(f"{Fore.YELLOW}No categories to clean.{Style.RESET_ALL}")
+            return
+
+        # Show preview
+        print(f"\n{Fore.YELLOW}Categories to clean:{Style.RESET_ALL}\n")
+
+        total_to_free = 0
+        for idx, result in enumerate(preview_results, 1):
+            data = result.to_dict()
+
+            if data['bytes_freed'] == 0:
+                status = f"{Fore.GREEN}(already clean){Style.RESET_ALL}"
+            else:
+                status = f"{Fore.YELLOW}{data['bytes_freed_human']}{Style.RESET_ALL}"
+
+            print(f"{idx}. {data['category']}: {status}")
+
+            if data['files_deleted'] > 0:
+                print(f"   {data['files_deleted']} files")
+
+            if data['skipped_files'] > 0:
+                print(f"   {Fore.CYAN}({data['skipped_files']} files skipped - in use or no permission){Style.RESET_ALL}")
+
+            total_to_free += data['bytes_freed']
+
+        print(f"\n{Fore.CYAN}Total space to free: {self._human_size(total_to_free)}{Style.RESET_ALL}")
+
+        if total_to_free == 0:
+            print(f"\n{Fore.GREEN}Nothing to clean! System is already tidy.{Style.RESET_ALL}")
+            return
+
+        # Confirm (unless dry run)
+        if not dry_run:
+            print(f"\n{Fore.YELLOW}⚠ WARNING: This will permanently delete the files shown above.{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}This action cannot be undone (except for Recycle Bin items).{Style.RESET_ALL}\n")
+
+            response = input(f"Continue? (yes/no): ").strip().lower()
+
+            if response != 'yes':
+                print(f"\n{Fore.CYAN}Cleanup cancelled.{Style.RESET_ALL}")
+                return
+
+        # Execute cleanup
+        print(f"\n{Fore.CYAN}{'Simulating' if dry_run else 'Executing'} cleanup...{Style.RESET_ALL}\n")
+
+        results = []
+        for cat_key in categories:
+            if cat_key not in available_categories:
+                continue
+
+            cat_name, cat_func = available_categories[cat_key]
+            result = cat_func(dry_run)
+            results.append(result)
+
+        # Show results
+        for result in results:
+            data = result.to_dict()
+
+            if data['success']:
+                status_color = Fore.GREEN
+                status = "✓" if not dry_run else "✓ (dry run)"
+            else:
+                status_color = Fore.RED
+                status = "✗"
+
+            print(f"{status_color}{status} {data['category']}{Style.RESET_ALL}")
+
+            if dry_run:
+                print(f"   Would delete: {data['files_deleted']} files")
+                print(f"   Would free: {data['bytes_freed_human']}")
+            else:
+                print(f"   Deleted: {data['files_deleted']} files")
+                print(f"   Freed: {data['bytes_freed_human']}")
+
+            if data['skipped_files'] > 0:
+                print(f"   Skipped: {data['skipped_files']} files (in use or no permission)")
+
+            if data['errors']:
+                print(f"   {Fore.YELLOW}Errors: {len(data['errors'])}{Style.RESET_ALL}")
+
+        # Summary
+        summary = self.storage_cleaner.get_cleanup_summary(results)
+
+        print(f"\n{Fore.GREEN}{Style.BRIGHT}Summary:{Style.RESET_ALL}")
+        print(f"Categories cleaned: {summary['successful']}/{summary['total_categories']}")
+
+        if dry_run:
+            print(f"Would free: {summary['total_bytes_freed_human']}")
+        else:
+            print(f"Total freed: {summary['total_bytes_freed_human']}")
+
+        if summary['total_files_skipped'] > 0:
+            print(f"Files skipped: {summary['total_files_skipped']} (in use or no permission)")
+
+        if summary['errors']:
+            print(f"\n{Fore.YELLOW}Some errors occurred. Check ~/.syspulse/cleanup_log.json for details.{Style.RESET_ALL}")
 
     def run_startup_scan(self):
         """Run startup impact analyzer"""
@@ -383,10 +524,12 @@ Examples:
     # Action options (Phase 2)
     parser.add_argument('--clean-browser-cache', action='store_true',
                         help='Clean browser cache (interactive with confirmation)')
+    parser.add_argument('--clean-storage', action='store_true',
+                        help='Clean storage (temp files, recycle bin, etc.)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be done without actually doing it')
 
-    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.1')
+    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.2')
 
     args = parser.parse_args()
 
@@ -395,6 +538,8 @@ Examples:
     # Phase 2: Action commands (take precedence)
     if args.clean_browser_cache:
         app.run_browser_cleanup(dry_run=args.dry_run)
+    elif args.clean_storage:
+        app.run_storage_cleanup(dry_run=args.dry_run)
     # Phase 1: Analysis commands
     elif args.browsers:
         app.run_browser_scan()

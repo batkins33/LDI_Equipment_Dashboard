@@ -7,6 +7,56 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0-alpha.2] - 2025-01-24
+
+### Added - Phase 2.2: Storage Cleanup Actions
+- **Storage cleanup with interactive confirmation**
+  - `--clean-storage` flag to trigger cleanup
+  - `--dry-run` flag to preview without executing
+  - Interactive confirmation before deleting files
+  - Multiple cleanup categories: temp files, recycle bin, old downloads, Windows Update cache
+  - Detailed summary of space freed and files deleted
+  - Audit logging to `~/.syspulse/cleanup_log.json`
+
+- **New action modules**
+  - `modules/actions/storage_actions.py` - StorageCleaner class
+  - Safe cleanup for temp directories, recycle bin, old downloads
+  - Windows Update cache cleanup (Windows only)
+  - Graceful error handling and permission checks
+
+### Changed
+- Updated version to `2.0.0-alpha.2`
+- Enhanced CLI to support storage cleanup actions
+
+### Technical Details
+- Cleans temp files from system temp directories
+- Empties recycle bin properly (uses Windows API on Windows)
+- Removes downloads older than 90 days
+- Windows Update cache cleanup (stops/restarts Windows Update service)
+- Tracks skipped files (in use or no permission)
+- Never deletes files without confirmation
+- Preview always shown first, then confirmation required
+
+### Safety Features
+- ✅ Requires "yes" confirmation before deleting
+- ✅ Shows exactly what will be cleaned and space freed
+- ✅ Dry-run mode to preview
+- ✅ Skips files in use or without permission
+- ✅ Detailed error reporting
+- ✅ Audit logging
+- ✅ Cannot be undone warning
+
+### Usage Examples
+```bash
+# Preview what would be cleaned (safe, no changes)
+python syspulse.py --clean-storage --dry-run
+
+# Actually clean storage (interactive confirmation required)
+python syspulse.py --clean-storage
+```
+
+---
+
 ## [2.0.0-alpha.1] - 2025-01-24
 
 ### Added - Phase 2.1: Browser Cache Cleanup

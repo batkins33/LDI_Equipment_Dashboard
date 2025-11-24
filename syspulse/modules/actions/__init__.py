@@ -13,7 +13,9 @@ All action modules follow safety-first principles:
 """
 
 from .browser_actions import BrowserCleaner
+from .storage_actions import StorageCleaner
 
 __all__ = [
     'BrowserCleaner',
+    'StorageCleaner',
 ]
