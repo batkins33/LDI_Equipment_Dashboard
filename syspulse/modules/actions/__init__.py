@@ -14,8 +14,10 @@ All action modules follow safety-first principles:
 
 from .browser_actions import BrowserCleaner
 from .storage_actions import StorageCleaner
+from .startup_actions import StartupManager
 
 __all__ = [
     'BrowserCleaner',
     'StorageCleaner',
+    'StartupManager',
 ]

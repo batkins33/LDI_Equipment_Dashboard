@@ -26,11 +26,13 @@ from process_explainer import ProcessExplainer
 try:
     from actions.browser_actions import BrowserCleaner
     from actions.storage_actions import StorageCleaner
+    from actions.startup_actions import StartupManager
     ACTIONS_AVAILABLE = True
 except ImportError:
     ACTIONS_AVAILABLE = False
     BrowserCleaner = None
     StorageCleaner = None
+    StartupManager = None
 
 try:
     from colorama import init, Fore, Style
@@ -60,9 +62,11 @@ class SysPulse:
         if ACTIONS_AVAILABLE:
             self.browser_cleaner = BrowserCleaner()
             self.storage_cleaner = StorageCleaner()
+            self.startup_manager = StartupManager()
         else:
             self.browser_cleaner = None
             self.storage_cleaner = None
+            self.startup_manager = None
 
     def print_header(self, text: str):
         """Print section header"""
@@ -359,6 +363,111 @@ class SysPulse:
         if summary['errors']:
             print(f"\n{Fore.YELLOW}Some errors occurred. Check ~/.syspulse/cleanup_log.json for details.{Style.RESET_ALL}")
 
+    def run_startup_management(self, action: str = 'list', dry_run: bool = False):
+        """
+        Manage startup items (disable/enable/backup/restore)
+
+        Args:
+            action: 'list', 'disable', 'enable', 'backup', or 'restore'
+            dry_run: If True, only show what would be done
+        """
+        if not ACTIONS_AVAILABLE or not self.startup_manager:
+            print(f"{Fore.RED}Error: Startup management module not available{Style.RESET_ALL}")
+            return
+
+        if self.startup_manager.system != "Windows":
+            print(f"{Fore.YELLOW}Startup management currently only supported on Windows.{Style.RESET_ALL}")
+            return
+
+        self.print_header("Startup Manager" + (" [DRY RUN]" if dry_run else ""))
+
+        # Scan startup items first
+        print("Scanning startup programs...")
+        items = self.startup_analyzer.scan_all()
+
+        if not items:
+            print(f"{Fore.YELLOW}No startup items found.{Style.RESET_ALL}")
+            return
+
+        # Filter to safe-to-disable items
+        items_to_manage = []
+        for item in items:
+            data = item.to_dict()
+            if data['safe_to_disable']:
+                items_to_manage.append(data)
+
+        if not items_to_manage:
+            print(f"{Fore.GREEN}All startup items are necessary or unsafe to disable.{Style.RESET_ALL}")
+            return
+
+        # Show startup items with recommendations
+        print(f"\n{Fore.YELLOW}Safe to disable startup items:{Style.RESET_ALL}\n")
+
+        for idx, item_data in enumerate(items_to_manage, 1):
+            impact_color = Fore.RED if item_data['impact'] == 'HIGH' else Fore.YELLOW if item_data['impact'] == 'MEDIUM' else Fore.GREEN
+
+            print(f"{idx}. {impact_color}[{item_data['impact']}]{Style.RESET_ALL} {Style.BRIGHT}{item_data['name']}{Style.RESET_ALL}")
+            print(f"   {item_data['description']}")
+            print(f"   {Fore.CYAN}→ {item_data['recommendation']}{Style.RESET_ALL}")
+            print()
+
+        # Confirm (unless dry run)
+        if not dry_run:
+            print(f"\n{Fore.YELLOW}⚠ WARNING: This will disable the startup items shown above.{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}Items will not be deleted - you can re-enable them later.{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW}A backup will be created automatically.{Style.RESET_ALL}\n")
+
+            response = input(f"Disable these items? (yes/no): ").strip().lower()
+
+            if response != 'yes':
+                print(f"\n{Fore.CYAN}Operation cancelled.{Style.RESET_ALL}")
+                return
+
+        # Execute disable
+        print(f"\n{Fore.CYAN}{'Simulating' if dry_run else 'Disabling'} startup items...{Style.RESET_ALL}\n")
+
+        results = []
+        for item_data in items_to_manage:
+            result = self.startup_manager.disable_startup_item(
+                item_data['name'],
+                item_data['location'],
+                item_data['command'],
+                dry_run=dry_run
+            )
+            results.append(result)
+
+        # Show results
+        successful = 0
+        failed = 0
+
+        for result in results:
+            data = result.to_dict()
+
+            if data['success']:
+                status_color = Fore.GREEN
+                status = "✓" if not dry_run else "✓ (dry run)"
+                successful += 1
+            else:
+                status_color = Fore.RED
+                status = "✗"
+                failed += 1
+
+            print(f"{status_color}{status} {data['item_name']}{Style.RESET_ALL}")
+
+            if data['error']:
+                print(f"   {Fore.YELLOW}Error: {data['error']}{Style.RESET_ALL}")
+
+        # Summary
+        print(f"\n{Fore.GREEN}{Style.BRIGHT}Summary:{Style.RESET_ALL}")
+        print(f"Successfully {('would disable' if dry_run else 'disabled')}: {successful}")
+        if failed > 0:
+            print(f"Failed: {failed}")
+
+        if not dry_run and successful > 0:
+            print(f"\n{Fore.CYAN}Items have been disabled. They will not start on next boot.{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}To re-enable, use: python syspulse.py --enable-startup{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}Backup saved to: ~/.syspulse/startup_backups/{Style.RESET_ALL}")
+
     def run_startup_scan(self):
         """Run startup impact analyzer"""
         self.print_header("Startup Impact Analyzer")
@@ -526,10 +635,12 @@ Examples:
                         help='Clean browser cache (interactive with confirmation)')
     parser.add_argument('--clean-storage', action='store_true',
                         help='Clean storage (temp files, recycle bin, etc.)')
+    parser.add_argument('--manage-startup', action='store_true',
+                        help='Disable safe-to-disable startup items (Windows only)')
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be done without actually doing it')
 
-    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.2')
+    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.3')
 
     args = parser.parse_args()
 
@@ -540,6 +651,8 @@ Examples:
         app.run_browser_cleanup(dry_run=args.dry_run)
     elif args.clean_storage:
         app.run_storage_cleanup(dry_run=args.dry_run)
+    elif args.manage_startup:
+        app.run_startup_management(dry_run=args.dry_run)
     # Phase 1: Analysis commands
     elif args.browsers:
         app.run_browser_scan()

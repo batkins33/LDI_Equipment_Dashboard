@@ -7,6 +7,63 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0-alpha.3] - 2025-01-24
+
+### Added - Phase 2.3: Startup Manager
+- **Startup item management with automatic backups**
+  - `--manage-startup` flag to disable safe-to-disable startup items
+  - `--dry-run` flag works with startup management
+  - Interactive confirmation before making changes
+  - Automatic backup before any modifications
+  - Items are disabled, not deleted (fully reversible)
+  - Currently Windows only (registry and startup folder support)
+
+- **New action modules**
+  - `modules/actions/startup_actions.py` - StartupManager class
+  - Disable/enable startup items safely
+  - Backup and restore functionality
+  - Registry value renaming (prefixes with `_DISABLED_`)
+  - Startup folder file renaming
+
+### Changed
+- Updated version to `2.0.0-alpha.3`
+- Enhanced CLI to support startup management
+
+### Technical Details
+- Only disables items marked as "safe_to_disable" by analyzer
+- Registry items: renamed to `_DISABLED_{name}` (not deleted)
+- Folder items: files renamed to `_DISABLED_{filename}`
+- Creates backup in `~/.syspulse/startup_backups/` before changes
+- Keeps last 10 backups automatically
+- Fully reversible - can re-enable all items
+
+### Safety Features
+- ✅ Requires "yes" confirmation before changes
+- ✅ Shows exactly which items will be disabled
+- ✅ Automatic backup before any modification
+- ✅ Only targets "safe to disable" items
+- ✅ Never deletes registry entries or files
+- ✅ Dry-run mode to preview
+- ✅ Items can be re-enabled later
+- ✅ Audit logging
+
+### Usage Examples
+```bash
+# Preview what would be disabled (safe, no changes)
+python syspulse.py --manage-startup --dry-run
+
+# Disable safe-to-disable startup items (interactive confirmation required)
+python syspulse.py --manage-startup
+```
+
+### Notes
+- Windows only in this release
+- Linux/macOS support planned for future releases
+- Items remain disabled until manually re-enabled
+- Backups stored in ~/.syspulse/startup_backups/
+
+---
+
 ## [2.0.0-alpha.2] - 2025-01-24
 
 ### Added - Phase 2.2: Storage Cleanup Actions
