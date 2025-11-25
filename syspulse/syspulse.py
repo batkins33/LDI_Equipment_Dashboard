@@ -21,6 +21,7 @@ from browser_scanner import BrowserScanner
 from startup_analyzer import StartupAnalyzer
 from storage_sense import StorageSense
 from process_explainer import ProcessExplainer
+from reporting import ReportGenerator
 
 # Phase 2: Action modules
 try:
@@ -57,6 +58,7 @@ class SysPulse:
         self.startup_analyzer = StartupAnalyzer()
         self.storage_sense = StorageSense()
         self.process_explainer = ProcessExplainer()
+        self.report_generator = ReportGenerator()
 
         # Phase 2: Action modules
         if ACTIONS_AVAILABLE:
@@ -67,6 +69,9 @@ class SysPulse:
             self.browser_cleaner = None
             self.storage_cleaner = None
             self.startup_manager = None
+
+        # Storage for scan results (for reporting)
+        self.last_scan_results = {}
 
     def print_header(self, text: str):
         """Print section header"""
@@ -580,8 +585,8 @@ class SysPulse:
             print(f"  {Fore.CYAN}→ {proc_data['recommendation']}{Style.RESET_ALL}")
             print()
 
-    def run_full_scan(self, quick_storage: bool = False):
-        """Run all scans"""
+    def run_full_scan(self, quick_storage: bool = False, export_report: Optional[str] = None):
+        """Run all scans and optionally export report"""
         print(f"{Fore.MAGENTA}{Style.BRIGHT}")
         print("  ____            ____        _          ")
         print(" / ___| _   _ ___|  _ \\ _   _| |___  ___ ")
@@ -593,6 +598,38 @@ class SysPulse:
         print("Control the bullshit. Make your computer run better.")
         print(f"{Style.RESET_ALL}")
 
+        # Run scans and collect data
+        print("Scanning browser profiles...")
+        browser_profiles = self.browser_scanner.scan_all()
+        browser_summary = self.browser_scanner.get_summary()
+        self.last_scan_results['browser'] = {
+            'summary': browser_summary,
+            'profiles': [p.to_dict() for p in browser_profiles]
+        }
+
+        print("Scanning startup programs...")
+        startup_items = self.startup_analyzer.scan_all()
+        startup_summary = self.startup_analyzer.get_summary()
+        self.last_scan_results['startup'] = {
+            'summary': startup_summary,
+            'top_recommendations': startup_summary['top_recommendations']
+        }
+
+        print("Scanning storage...")
+        storage_categories = self.storage_sense.scan_all(quick_scan=quick_storage)
+        storage_summary = self.storage_sense.get_summary()
+        self.last_scan_results['storage'] = {
+            'summary': storage_summary
+        }
+
+        print("Scanning processes...")
+        processes = self.process_explainer.scan_all(min_memory_mb=50)
+        process_summary = self.process_explainer.get_summary()
+        self.last_scan_results['process'] = {
+            'summary': process_summary
+        }
+
+        # Display results
         self.run_browser_scan()
         self.run_startup_scan()
         self.run_storage_scan(quick=quick_storage)
@@ -600,6 +637,45 @@ class SysPulse:
 
         print(f"\n{Fore.GREEN}{Style.BRIGHT}Scan complete!{Style.RESET_ALL}")
         print(f"\n{Fore.CYAN}Review the recommendations above to improve your system performance.{Style.RESET_ALL}\n")
+
+        # Export report if requested
+        if export_report:
+            self.export_report(export_report)
+
+    def export_report(self, format: str = 'json', output_file: Optional[Path] = None):
+        """Export scan results to report"""
+        self.print_header(f"Exporting Report ({format.upper()})")
+
+        if not self.last_scan_results:
+            print(f"{Fore.YELLOW}No scan results available. Run a scan first.{Style.RESET_ALL}")
+            return
+
+        try:
+            if format.lower() == 'json':
+                file_path = self.report_generator.generate_json_report(
+                    browser_data=self.last_scan_results.get('browser'),
+                    startup_data=self.last_scan_results.get('startup'),
+                    storage_data=self.last_scan_results.get('storage'),
+                    process_data=self.last_scan_results.get('process'),
+                    output_file=output_file
+                )
+            elif format.lower() == 'html':
+                file_path = self.report_generator.generate_html_report(
+                    browser_data=self.last_scan_results.get('browser'),
+                    startup_data=self.last_scan_results.get('startup'),
+                    storage_data=self.last_scan_results.get('storage'),
+                    process_data=self.last_scan_results.get('process'),
+                    output_file=output_file
+                )
+            else:
+                print(f"{Fore.RED}Unsupported format: {format}{Style.RESET_ALL}")
+                return
+
+            print(f"{Fore.GREEN}✓ Report exported successfully!{Style.RESET_ALL}")
+            print(f"{Fore.CYAN}Location: {file_path}{Style.RESET_ALL}")
+
+        except Exception as e:
+            print(f"{Fore.RED}Error exporting report: {e}{Style.RESET_ALL}")
 
 
 def main():
@@ -640,11 +716,24 @@ Examples:
     parser.add_argument('--dry-run', action='store_true',
                         help='Show what would be done without actually doing it')
 
-    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.3')
+    # Report options (Phase 2.4)
+    parser.add_argument('--export-json', action='store_true',
+                        help='Export scan results to JSON report')
+    parser.add_argument('--export-html', action='store_true',
+                        help='Export scan results to HTML report')
+
+    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.4')
 
     args = parser.parse_args()
 
     app = SysPulse()
+
+    # Determine export format
+    export_format = None
+    if args.export_json:
+        export_format = 'json'
+    elif args.export_html:
+        export_format = 'html'
 
     # Phase 2: Action commands (take precedence)
     if args.clean_browser_cache:
@@ -656,15 +745,23 @@ Examples:
     # Phase 1: Analysis commands
     elif args.browsers:
         app.run_browser_scan()
+        if export_format:
+            app.export_report(export_format)
     elif args.startup:
         app.run_startup_scan()
+        if export_format:
+            app.export_report(export_format)
     elif args.storage:
         app.run_storage_scan(quick=args.quick)
+        if export_format:
+            app.export_report(export_format)
     elif args.processes:
         app.run_process_scan()
+        if export_format:
+            app.export_report(export_format)
     else:
         # Run full scan
-        app.run_full_scan(quick_storage=args.quick)
+        app.run_full_scan(quick_storage=args.quick, export_report=export_format)
 
 
 if __name__ == "__main__":

@@ -7,6 +7,70 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0-alpha.4] - 2025-01-24
+
+### Added - Phase 2.4: Report Generation
+- **JSON and HTML report generation**
+  - `--export-json` flag to export scan results to JSON
+  - `--export-html` flag to export scan results to HTML
+  - Automatic report generation after scans
+  - Beautiful HTML reports with styled sections
+  - Reports saved to `~/.syspulse/reports/`
+
+- **New modules**
+  - `modules/reporting.py` - ReportGenerator class
+  - JSON export with full scan data
+  - HTML export with visual styling and color coding
+  - Timestamp and version tracking in reports
+
+### Changed
+- Updated version to `2.0.0-alpha.4`
+- Enhanced run_full_scan() to collect all scan data
+- Added last_scan_results storage for reporting
+- CLI now supports export flags with any scan
+
+### Technical Details
+- Reports include metadata (timestamp, version, report type)
+- JSON reports: structured data for programmatic access
+- HTML reports: styled with CSS, responsive design
+- Report filenames include timestamp for organization
+- Reports stored in ~/.syspulse/reports/ directory
+
+### Report Features
+- **JSON Reports**:
+  - Complete scan data in structured format
+  - Easy to parse programmatically
+  - Can be used for automation or further analysis
+
+- **HTML Reports**:
+  - Beautiful gradient header design
+  - Color-coded items by priority (high/medium/low)
+  - Stat cards with key metrics
+  - Responsive layout
+  - Browser-ready, shareable
+
+### Usage Examples
+```bash
+# Run full scan and export to JSON
+python syspulse.py --export-json
+
+# Run full scan and export to HTML
+python syspulse.py --export-html
+
+# Scan specific module and export
+python syspulse.py --browsers --export-html
+python syspulse.py --startup --export-json
+```
+
+### Report Contents
+- Browser profiles with cache sizes and recommendations
+- Startup items with impact levels and suggestions
+- Storage analysis with cleanup opportunities
+- Process information with resource usage
+- All with timestamp and system context
+
+---
+
 ## [2.0.0-alpha.3] - 2025-01-24
 
 ### Added - Phase 2.3: Startup Manager
