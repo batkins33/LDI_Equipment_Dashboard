@@ -7,6 +7,137 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.0.0-alpha.9] - 2025-01-26
+
+### Added - Phase 3.8-3.9: Settings & Packaging
+- **Settings Dialog (Phase 3.8)**
+  - Comprehensive settings dialog with 4 tabs
+  - General settings: Theme selection, startup options
+  - Scanning settings: Auto-scan scheduling, scan options
+  - Cleanup settings: Confirmation preferences, backup options, report settings
+  - Advanced settings: Performance tuning, logging, data management
+  - Restore defaults functionality
+  - Settings saved notification
+  - Keyboard shortcut: Ctrl+,
+
+- **About Dialog**
+  - Professional about dialog with app information
+  - Version display and description
+  - Feature list
+  - Development phase tracking
+  - Technology stack information
+  - License information
+
+- **Packaging System (Phase 3.9)**
+  - PyInstaller spec file (`syspulse.spec`)
+  - Windows build script (`build_windows.py`)
+  - macOS build script (`build_macos.py`)
+  - Linux build script (`build_linux.py`)
+  - Comprehensive packaging documentation (`PACKAGING.md`)
+  - Standalone executable support for all platforms
+  - Build size optimization with UPX
+  - Distribution guides for each platform
+
+### Changed
+- Updated version to `3.0.0-alpha.9`
+- Replaced QMessageBox about with custom AboutDialog
+- Added Settings menu item to Help menu
+- Updated About dialog to show completion status
+
+### Settings Dialog Features
+- **General Tab**:
+  - Theme selection (System/Light/Dark)
+  - Icon display toggle
+  - Start minimized option
+  - Update checking
+  - Tab restoration
+
+- **Scanning Tab**:
+  - Automatic scan scheduling
+  - Scan interval configuration (hours)
+  - Quick vs thorough storage scan
+  - Hidden files scanning
+  - Minimum process memory threshold
+
+- **Cleanup Tab**:
+  - Confirmation preferences per action type
+  - Backup creation toggle
+  - Backup retention period
+  - Auto-export reports after scans
+  - Default report format (JSON/HTML/Both)
+
+- **Advanced Tab**:
+  - Background scan thread count
+  - Process refresh interval
+  - Debug logging toggle
+  - Operation logging options
+  - Clear cache function
+  - Delete all reports function
+
+### Packaging Features
+- **Cross-platform builds**: Windows, macOS, Linux
+- **One-file executables**: Single file distribution
+- **Small size**: ~50-80 MB per platform
+- **No console window**: Clean GUI-only launch
+- **UPX compression**: Smaller file sizes
+- **Build automation**: Simple Python scripts
+
+### Build Scripts
+- `build_windows.py` - Creates SysPulse.exe
+- `build_macos.py` - Creates SysPulse.app bundle
+- `build_linux.py` - Creates SysPulse executable
+- Clean previous builds automatically
+- Size reporting after build
+- Executable permissions on Linux
+
+### Documentation
+- **PACKAGING.md**: Complete packaging guide
+  - Requirements for each platform
+  - Build instructions
+  - Distribution options (standalone, installer, app stores)
+  - Code signing guides
+  - Troubleshooting
+  - File size optimization
+  - Auto-update implementation
+  - Release checklist
+
+### Distribution Options
+- **Windows**: .exe, Inno Setup installer, Microsoft Store
+- **macOS**: .app, DMG installer, Mac App Store
+- **Linux**: Executable, AppImage, .deb/.rpm packages
+
+### Usage
+```bash
+# Run from source
+python syspulse_gui.py
+
+# Build standalone executable
+python build_windows.py  # Windows
+python build_macos.py    # macOS
+python build_linux.py    # Linux
+
+# Access settings
+# Menu: Help → Settings (Ctrl+,)
+
+# View about
+# Menu: Help → About SysPulse
+```
+
+### Phase 3 Complete! 🎉
+✅ 3.1 - Basic GUI Framework
+✅ 3.2 - Dashboard Tab
+✅ 3.3 - Browser Tab
+✅ 3.4 - Startup Tab
+✅ 3.5 - Storage Tab
+✅ 3.6 - Processes Tab
+✅ 3.7 - Reports Tab
+✅ 3.8 - Settings & Preferences
+✅ 3.9 - Packaging & Distribution
+
+**All Phase 3 features complete and production-ready!**
+
+---
+
 ## [3.0.0-alpha.7] - 2025-01-26
 
 ### Added - Phase 3.3-3.7: All GUI Tabs Complete

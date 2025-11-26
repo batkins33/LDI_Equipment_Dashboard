@@ -18,6 +18,7 @@ except ImportError:
 
 from .styles import get_stylesheet, get_color
 from .tabs import DashboardTab, BrowserTab, StartupTab, StorageTab, ProcessesTab, ReportsTab
+from .dialogs import SettingsDialog, AboutDialog
 
 
 class MainWindow(QMainWindow):
@@ -114,6 +115,13 @@ class MainWindow(QMainWindow):
 
         # Help Menu
         help_menu = menubar.addMenu("&Help")
+
+        settings_action = QAction("Settings", self)
+        settings_action.setShortcut("Ctrl+,")
+        settings_action.triggered.connect(self.show_settings)
+        help_menu.addAction(settings_action)
+
+        help_menu.addSeparator()
 
         about_action = QAction("About SysPulse", self)
         about_action.triggered.connect(self.show_about)
@@ -268,21 +276,17 @@ class MainWindow(QMainWindow):
         )
         self.statusBar().showMessage("Ready")
 
+    def show_settings(self):
+        """Show settings dialog"""
+        dialog = SettingsDialog(self)
+        if dialog.exec():
+            if dialog.settings_changed:
+                self.statusBar().showMessage("Settings saved", 3000)
+
     def show_about(self):
         """Show about dialog"""
-        QMessageBox.about(
-            self,
-            "About SysPulse",
-            "<h2>SysPulse v3.0.0-alpha.7</h2>"
-            "<p><b>System Utilities Dashboard</b></p>"
-            "<p>Control the bullshit. Make your computer run better.</p>"
-            "<p>A lightweight system utilities dashboard that gives you "
-            "understandable control over the things that actually impact "
-            "your computer's performance.</p>"
-            "<hr>"
-            "<p><b>Phase 3.3-3.7:</b> All GUI tabs implemented!</p>"
-            "<p>Built with PyQt6</p>"
-        )
+        dialog = AboutDialog(self)
+        dialog.exec()
 
     def show_help(self):
         """Show help dialog"""
