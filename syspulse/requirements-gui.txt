@@ -1,0 +1,16 @@
+# SysPulse GUI Requirements
+# Install with: pip install -r requirements-gui.txt
+
+# Core GUI framework
+PyQt6>=6.6.0
+PyQt6-Charts>=6.6.0
+
+# Visualization
+matplotlib>=3.8.0
+
+# Image handling
+Pillow>=10.0.0
+
+# All base requirements
+colorama>=0.4.6
+psutil>=5.9.0

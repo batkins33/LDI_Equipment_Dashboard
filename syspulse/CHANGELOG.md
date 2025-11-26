@@ -7,6 +7,95 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.0.0-alpha.1] - 2025-01-26
+
+### Added - Phase 3.1: Basic GUI Framework
+- **Desktop GUI with PyQt6**
+  - Graphical user interface entry point (`syspulse_gui.py`)
+  - Main window with tabbed interface
+  - Complete menu bar (File, Scan, Actions, Help)
+  - Status bar for operation feedback
+  - Responsive window sizing (1024x768 minimum)
+
+- **GUI Structure**
+  - `gui/` package with modular organization
+  - `gui/main_window.py` - Main application window
+  - `gui/styles.py` - Comprehensive stylesheet and theming
+  - `gui/tabs/` - Placeholder for tab widgets
+  - `gui/widgets/` - Placeholder for reusable widgets
+  - `gui/dialogs/` - Placeholder for modal dialogs
+
+- **Six tab interface**
+  - Dashboard tab (placeholder)
+  - Browsers tab (placeholder)
+  - Startup tab (placeholder)
+  - Storage tab (placeholder)
+  - Processes tab (placeholder)
+  - Reports tab (placeholder)
+
+- **Menu functionality**
+  - File menu: Export JSON/HTML reports, Exit
+  - Scan menu: Full scan, individual module scans
+  - Actions menu: Clean cache, storage, manage startup
+  - Help menu: About dialog, Help dialog
+
+- **Keyboard shortcuts**
+  - `F5` - Full system scan
+  - `Ctrl+J` - Export JSON report
+  - `Ctrl+H` - Export HTML report
+  - `Ctrl+Q` - Exit application
+  - `F1` - Show help
+
+- **Design system**
+  - Purple gradient color scheme (#667eea → #764ba2)
+  - Comprehensive Qt stylesheet with custom widgets
+  - Fusion style for native look
+  - Centered window positioning
+
+- **Documentation**
+  - `GUI_README.md` - Complete GUI documentation
+  - `PHASE3_PLAN.md` - Detailed Phase 3 implementation plan
+  - `requirements-gui.txt` - GUI dependencies file
+
+### Changed
+- Updated version to `3.0.0-alpha.1`
+- Added PyQt6 framework decision documentation
+
+### Technical Details
+- **Framework**: PyQt6 6.6.0+
+- **Charts**: PyQt6-Charts for visualizations
+- **Cross-platform**: Windows, macOS, Linux support
+- **Graceful fallback**: Shows instructions if PyQt6 not installed
+- Tab content is placeholder - will be implemented in phases 3.2-3.7
+
+### Requirements
+```
+PyQt6>=6.6.0
+PyQt6-Charts>=6.6.0
+matplotlib>=3.8.0
+Pillow>=10.0.0
+```
+
+### Usage
+```bash
+# Install GUI dependencies
+pip install -r requirements-gui.txt
+
+# Launch GUI
+python syspulse_gui.py
+
+# Or continue using CLI/interactive mode
+python syspulse.py --interactive
+```
+
+### Notes
+- This is Phase 3.1 - basic framework only
+- Tab content will be implemented in phases 3.2-3.9
+- All backend functionality from Phase 1 and 2 is integrated
+- GUI wraps existing SysPulse modules, no code duplication
+
+---
+
 ## [2.0.0-alpha.5] - 2025-01-24
 
 ### Added - Phase 2.5: Interactive Mode
