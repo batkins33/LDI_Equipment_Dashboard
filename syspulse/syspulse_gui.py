@@ -79,7 +79,7 @@ def main():
     app = QApplication(sys.argv)
     app.setApplicationName("SysPulse")
     app.setOrganizationName("SysPulse")
-    app.setApplicationVersion("3.0.0-alpha.1")
+    app.setApplicationVersion("3.0.0-alpha.2")
 
     # Set application-wide style
     app.setStyle("Fusion")

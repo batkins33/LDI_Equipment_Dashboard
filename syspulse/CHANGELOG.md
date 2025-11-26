@@ -7,6 +7,76 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [3.0.0-alpha.2] - 2025-01-26
+
+### Added - Phase 3.2: Dashboard Tab
+- **Functional dashboard with live data**
+  - System overview dashboard with real backend integration
+  - "Run Full Scan" button with background threading
+  - Real-time scan progress updates
+  - Automatic health score calculation
+
+- **Custom widgets**
+  - `StatCard` widget for displaying key metrics
+  - `HealthScore` widget with color-coded gauge
+  - Responsive grid layout for stat cards
+
+- **Dashboard features**
+  - Four stat cards: Browser Cache, Startup Programs, Storage to Clean, Processes
+  - System health score (0-100) with visual gauge
+  - Color-coded health indicator (green=excellent, blue=good, yellow=fair, red=poor)
+  - Recent scans list with timestamps
+  - Quick action buttons to jump to specific tabs
+
+- **Background scanning**
+  - Non-blocking scan execution using QThread
+  - Progress updates during scan
+  - Scans all modules: browsers, startup, storage, processes
+  - Results stored for export
+
+- **Health score algorithm**
+  - Deducts points for high-impact startup items
+  - Considers safe-to-disable startup count
+  - Factors in storage cleanup potential
+  - Monitors CPU usage
+  - Score range: 0-100 (higher is better)
+
+### Changed
+- Updated version to `3.0.0-alpha.2`
+- Replaced placeholder dashboard with functional DashboardTab
+- Integrated real SysPulse backend data
+
+### Technical Details
+- Background scan thread prevents UI freezing
+- All scans run with `quick_scan=True` for speed
+- Health score updates automatically after scan
+- Recent scans loaded from report history
+- Quick action buttons navigate to relevant tabs
+
+### UI Improvements
+- Professional stat card design with hover effects
+- Color-coded gauges and indicators
+- Scrollable dashboard for smaller screens
+- Responsive layout adapts to window size
+
+### Dashboard Sections
+1. **Header** - Title and "Run Full Scan" button
+2. **Stat Cards** - 4 key metrics in grid layout
+3. **Health Score** - Visual gauge with description
+4. **Status** - Scan progress and last scan time
+5. **Recent Scans** - History of previous scans
+6. **Quick Actions** - Shortcut buttons to other tabs
+
+### Usage
+```bash
+python syspulse_gui.py
+# Click "Run Full Scan" on dashboard
+# View stats update in real-time
+# Health score calculated automatically
+```
+
+---
+
 ## [3.0.0-alpha.1] - 2025-01-26
 
 ### Added - Phase 3.1: Basic GUI Framework

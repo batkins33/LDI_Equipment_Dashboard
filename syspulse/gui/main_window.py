@@ -17,6 +17,7 @@ except ImportError:
     print("PyQt6 not installed. Please run: pip install PyQt6 PyQt6-Charts")
 
 from .styles import get_stylesheet, get_color
+from .tabs import DashboardTab
 
 
 class MainWindow(QMainWindow):
@@ -147,24 +148,8 @@ class MainWindow(QMainWindow):
         self.create_reports_tab()
 
     def create_dashboard_tab(self):
-        """Create dashboard tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        # Placeholder content
-        label = QLabel("📊 Dashboard")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("System overview and quick actions will appear here.\n\nThis will be implemented in Phase 3.2")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create dashboard tab"""
+        tab = DashboardTab(self.app)
         self.tabs.addTab(tab, "Dashboard")
 
     def create_browser_tab(self):
@@ -363,14 +348,14 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "About SysPulse",
-            "<h2>SysPulse v3.0.0-alpha.1</h2>"
+            "<h2>SysPulse v3.0.0-alpha.2</h2>"
             "<p><b>System Utilities Dashboard</b></p>"
             "<p>Control the bullshit. Make your computer run better.</p>"
             "<p>A lightweight system utilities dashboard that gives you "
             "understandable control over the things that actually impact "
             "your computer's performance.</p>"
             "<hr>"
-            "<p><b>Phase 3:</b> Desktop GUI</p>"
+            "<p><b>Phase 3.2:</b> Dashboard Tab with live data</p>"
             "<p>Built with PyQt6</p>"
         )
 
