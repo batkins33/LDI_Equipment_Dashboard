@@ -16,12 +16,14 @@ from typing import Optional, List
 
 # Add modules to path
 sys.path.insert(0, str(Path(__file__).parent / 'modules'))
+sys.path.insert(0, str(Path(__file__).parent / 'ui'))
 
 from browser_scanner import BrowserScanner
 from startup_analyzer import StartupAnalyzer
 from storage_sense import StorageSense
 from process_explainer import ProcessExplainer
 from reporting import ReportGenerator
+from interactive import InteractiveMode
 
 # Phase 2: Action modules
 try:
@@ -722,11 +724,21 @@ Examples:
     parser.add_argument('--export-html', action='store_true',
                         help='Export scan results to HTML report')
 
-    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.4')
+    # Interactive mode (Phase 2.5)
+    parser.add_argument('--interactive', '-i', action='store_true',
+                        help='Launch interactive menu mode')
+
+    parser.add_argument('--version', action='version', version='SysPulse 2.0.0-alpha.5')
 
     args = parser.parse_args()
 
     app = SysPulse()
+
+    # Phase 2.5: Interactive mode (takes highest precedence)
+    if args.interactive:
+        interactive = InteractiveMode(app)
+        interactive.run()
+        return
 
     # Determine export format
     export_format = None

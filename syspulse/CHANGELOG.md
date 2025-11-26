@@ -7,6 +7,110 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.0.0-alpha.5] - 2025-01-24
+
+### Added - Phase 2.5: Interactive Mode
+- **Interactive menu-driven interface**
+  - `--interactive` or `-i` flag to launch interactive mode
+  - User-friendly text-based menu system
+  - Numbered options for easy navigation
+  - Clear back/exit navigation
+  - Clean screen transitions between menus
+
+- **Main menu features**
+  - Full system scan option
+  - Individual module scans (browsers, startup, storage, processes)
+  - Cleanup & optimization submenu
+  - Reports & history submenu
+  - Settings submenu
+
+- **Guided cleanup wizard**
+  - Step-by-step walkthrough (1/3, 2/3, 3/3)
+  - Browser cache cleanup guidance
+  - Storage cleanup guidance
+  - Startup optimization guidance
+  - Summary of completed actions
+  - Automatic prompts after each scan
+
+- **Enhanced user experience**
+  - Smart confirmations (Y/n or y/N defaults)
+  - Dry-run mode prompts before destructive actions
+  - Action history tracking for future undo support
+  - Report export integration from menus
+  - Help and about screens
+  - Reports directory information
+
+- **New modules**
+  - `ui/interactive.py` - InteractiveMode class
+  - Complete menu system with submenus
+  - Action history tracking (foundation for undo)
+
+### Changed
+- Updated version to `2.0.0-alpha.5`
+- Interactive mode takes precedence over other CLI flags
+- All scan operations can now prompt for follow-up actions
+
+### Technical Details
+- Interactive mode wraps existing SysPulse functionality
+- No changes to core scanning or action modules
+- Uses colorama for cross-platform colored output
+- Clear screen functionality for Windows and Unix
+- Action history stored in memory for session tracking
+
+### Interactive Mode Features
+- **Navigation**:
+  - Number-based menu selection
+  - 0 to go back or exit
+  - Confirmation before exit
+
+- **Cleanup Operations**:
+  - Integrated with all Phase 2 action modules
+  - Browser cache cleanup with profile selection
+  - Storage cleanup with category breakdown
+  - Startup management with impact display
+
+- **Reports & History**:
+  - Export current scan to JSON or HTML
+  - View previously generated reports
+  - View action history for potential undo
+  - Reports directory location display
+
+- **Settings**:
+  - View reports directory path
+  - About SysPulse information
+  - Interactive help screen
+
+### Usage Examples
+```bash
+# Launch interactive mode
+python syspulse.py --interactive
+python syspulse.py -i
+
+# Interactive mode provides:
+# - Main menu with 8 options
+# - Scan options for each module
+# - Cleanup & optimization submenu
+# - Guided cleanup wizard
+# - Report generation and history
+# - Settings and help
+```
+
+### User Experience Improvements
+- No need to remember CLI flags
+- Clear prompts and confirmations
+- Step-by-step guidance for first-time users
+- Visual feedback with colored output
+- Organized menus for easy discovery
+- Automatic follow-up prompts after scans
+
+### Future Enhancements (Tracked)
+- Undo functionality (history tracking implemented)
+- Custom profiles/presets
+- Scheduled scans from interactive mode
+- More detailed action history with timestamps
+
+---
+
 ## [2.0.0-alpha.4] - 2025-01-24
 
 ### Added - Phase 2.4: Report Generation
