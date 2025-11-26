@@ -17,7 +17,7 @@ except ImportError:
     print("PyQt6 not installed. Please run: pip install PyQt6 PyQt6-Charts")
 
 from .styles import get_stylesheet, get_color
-from .tabs import DashboardTab
+from .tabs import DashboardTab, BrowserTab, StartupTab, StorageTab, ProcessesTab, ReportsTab
 
 
 class MainWindow(QMainWindow):
@@ -153,103 +153,28 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(tab, "Dashboard")
 
     def create_browser_tab(self):
-        """Create browser tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        label = QLabel("🌐 Browser Profiles")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("Browser profile analysis and cache management will appear here.\n\nThis will be implemented in Phase 3.3")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create browser tab"""
+        tab = BrowserTab(self.app)
         self.tabs.addTab(tab, "Browsers")
 
     def create_startup_tab(self):
-        """Create startup tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        label = QLabel("🚀 Startup Programs")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("Startup program management will appear here.\n\nThis will be implemented in Phase 3.4")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create startup tab"""
+        tab = StartupTab(self.app)
         self.tabs.addTab(tab, "Startup")
 
     def create_storage_tab(self):
-        """Create storage tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        label = QLabel("💾 Storage")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("Storage analysis and cleanup will appear here.\n\nThis will be implemented in Phase 3.5")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create storage tab"""
+        tab = StorageTab(self.app)
         self.tabs.addTab(tab, "Storage")
 
     def create_processes_tab(self):
-        """Create processes tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        label = QLabel("⚙️ Processes")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("Process monitoring will appear here.\n\nThis will be implemented in Phase 3.6")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create processes tab"""
+        tab = ProcessesTab(self.app)
         self.tabs.addTab(tab, "Processes")
 
     def create_reports_tab(self):
-        """Create reports tab (placeholder)"""
-        tab = QWidget()
-        layout = QVBoxLayout()
-        tab.setLayout(layout)
-
-        label = QLabel("📊 Reports")
-        label.setProperty("class", "header")
-        label.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        layout.addWidget(label)
-
-        desc = QLabel("Report history and export will appear here.\n\nThis will be implemented in Phase 3.7")
-        desc.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        desc.setProperty("class", "caption")
-        layout.addWidget(desc)
-
-        layout.addStretch()
-
+        """Create reports tab"""
+        tab = ReportsTab(self.app)
         self.tabs.addTab(tab, "Reports")
 
     def create_status_bar(self):
@@ -348,14 +273,14 @@ class MainWindow(QMainWindow):
         QMessageBox.about(
             self,
             "About SysPulse",
-            "<h2>SysPulse v3.0.0-alpha.2</h2>"
+            "<h2>SysPulse v3.0.0-alpha.7</h2>"
             "<p><b>System Utilities Dashboard</b></p>"
             "<p>Control the bullshit. Make your computer run better.</p>"
             "<p>A lightweight system utilities dashboard that gives you "
             "understandable control over the things that actually impact "
             "your computer's performance.</p>"
             "<hr>"
-            "<p><b>Phase 3.2:</b> Dashboard Tab with live data</p>"
+            "<p><b>Phase 3.3-3.7:</b> All GUI tabs implemented!</p>"
             "<p>Built with PyQt6</p>"
         )
 

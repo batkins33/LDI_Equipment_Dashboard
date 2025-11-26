@@ -5,12 +5,17 @@ Individual tab implementations for different modules.
 """
 
 from .dashboard import DashboardTab
+from .browser import BrowserTab
+from .startup import StartupTab
+from .storage import StorageTab
+from .processes import ProcessesTab
+from .reports import ReportsTab
 
-# More tab widgets will be imported here as they are implemented
-# from .browser import BrowserTab
-# from .startup import StartupTab
-# from .storage import StorageTab
-# from .processes import ProcessesTab
-# from .reports import ReportsTab
-
-__all__ = ['DashboardTab']
+__all__ = [
+    'DashboardTab',
+    'BrowserTab',
+    'StartupTab',
+    'StorageTab',
+    'ProcessesTab',
+    'ReportsTab'
+]
