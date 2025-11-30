@@ -1,0 +1,32 @@
+{
+  "name": "Creative Writing Rubric",
+  "criteria": [
+    {
+      "label": "Voice & Style",
+      "description": "Distinctive author voice. Appropriate and consistent style for the genre. Word choice enhances meaning.",
+      "weight": "25%"
+    },
+    {
+      "label": "Character Development",
+      "description": "Well-developed, believable characters. Clear motivations and growth. Effective dialogue.",
+      "weight": "25%"
+    },
+    {
+      "label": "Plot & Structure",
+      "description": "Engaging plot with clear conflict and resolution. Effective pacing. Logical story progression.",
+      "weight": "20%"
+    },
+    {
+      "label": "Setting & Description",
+      "description": "Vivid, sensory details that bring the world to life. Setting supports the story.",
+      "weight": "15%"
+    },
+    {
+      "label": "Technical Execution",
+      "description": "Grammar, spelling, and punctuation support readability. Shows attention to craft.",
+      "weight": "15%"
+    }
+  ],
+  "tone": "supportive",
+  "commentStyle": "paragraphs"
+}
