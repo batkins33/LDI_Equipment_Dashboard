@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Google Sans', Arial, sans-serif;
+      margin: 0;
+      padding: 16px;
+      font-size: 14px;
+      color: #202124;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 16px 0;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      margin: 16px 0 8px 0;
+      color: #5f6368;
+    }
+
+    .section {
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e8eaed;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 12px;
+      color: #5f6368;
+    }
+
+    input[type="text"], select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    input[type="color"] {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    button:hover {
+      background-color: #1765cc;
+    }
+
+    button:disabled {
+      background-color: #dadce0;
+      cursor: not-allowed;
+    }
+
+    button.secondary {
+      background-color: white;
+      color: #1a73e8;
+      border: 1px solid #dadce0;
+    }
+
+    button.secondary:hover {
+      background-color: #f8f9fa;
+    }
+
+    button.danger {
+      background-color: #d93025;
+    }
+
+    button.danger:hover {
+      background-color: #c5221f;
+    }
+
+    .color-role {
+      margin-bottom: 16px;
+    }
+
+    .color-role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .color-preview {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 500;
+      color: #5f6368;
+    }
+
+    .palette-item {
+      padding: 12px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .palette-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .palette-item.selected {
+      border-color: #1a73e8;
+      background-color: #e8f0fe;
+    }
+
+    .palette-colors {
+      display: flex;
+      gap: 4px;
+    }
+
+    .palette-color-swatch {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border: 1px solid #dadce0;
+    }
+
+    .results-container {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+
+    .color-result {
+      padding: 12px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+
+    .color-result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .color-swatches {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .color-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 4px;
+      border: 1px solid #dadce0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      color: #fff;
+      text-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    .arrow {
+      color: #5f6368;
+      font-size: 18px;
+    }
+
+    .color-info {
+      font-size: 12px;
+      color: #5f6368;
+      margin-bottom: 4px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+      margin-left: 8px;
+    }
+
+    .badge.on-brand {
+      background-color: #e6f4ea;
+      color: #1e8e3e;
+    }
+
+    .badge.near-brand {
+      background-color: #fef7e0;
+      color: #f9ab00;
+    }
+
+    .badge.off-brand {
+      background-color: #fce8e6;
+      color: #d93025;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 24px;
+      color: #5f6368;
+    }
+
+    .spinner {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #1a73e8;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 12px;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .success-message {
+      background-color: #e6f4ea;
+      color: #1e8e3e;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .error-message {
+      background-color: #fce8e6;
+      color: #d93025;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .tab-container {
+      display: flex;
+      border-bottom: 1px solid #e8eaed;
+      margin-bottom: 16px;
+    }
+
+    .tab {
+      flex: 1;
+      padding: 12px;
+      text-align: center;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      font-weight: 500;
+      color: #5f6368;
+    }
+
+    .tab.active {
+      color: #1a73e8;
+      border-bottom-color: #1a73e8;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .stats {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .stat {
+      flex: 1;
+      padding: 12px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 500;
+      color: #202124;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #5f6368;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h2>Brand Color Harmonizer</h2>
+
+    <div class="tab-container">
+      <div class="tab active" onclick="switchTab('palettes')">Palettes</div>
+      <div class="tab" onclick="switchTab('scan')">Scan</div>
+    </div>
+
+    <!-- Palettes Tab -->
+    <div id="palettes-tab" class="tab-content active">
+      <div class="section">
+        <h3>Saved Palettes</h3>
+        <div id="palette-list"></div>
+        <button class="secondary" onclick="showNewPaletteForm()">+ New Palette</button>
+      </div>
+
+      <div id="new-palette-form" class="section hidden">
+        <h3>Create New Palette</h3>
+        <label>Palette Name</label>
+        <input type="text" id="palette-name" placeholder="e.g., Tangent Forge v1.2">
+
+        <div class="color-role">
+          <div class="color-role-header">
+            <label>Primary Color</label>
+          </div>
+          <input type="color" id="color-primary" value="#1a73e8">
+          <input type="text" id="color-primary-hex" value="#1a73e8" placeholder="#1a73e8">
+        </div>
+
+        <div class="color-role">
+          <div class="color-role-header">
+            <label>Secondary Color</label>
+          </div>
+          <input type="color" id="color-secondary" value="#34a853">
+          <input type="text" id="color-secondary-hex" value="#34a853" placeholder="#34a853">
+        </div>
+
+        <div class="color-role">
+          <div class="color-role-header">
+            <label>Accent Color</label>
+          </div>
+          <input type="color" id="color-accent" value="#fbbc04">
+          <input type="text" id="color-accent-hex" value="#fbbc04" placeholder="#fbbc04">
+        </div>
+
+        <div class="color-role">
+          <div class="color-role-header">
+            <label>Neutral Color</label>
+          </div>
+          <input type="color" id="color-neutral" value="#5f6368">
+          <input type="text" id="color-neutral-hex" value="#5f6368" placeholder="#5f6368">
+        </div>
+
+        <button onclick="savePalette()">Save Palette</button>
+        <button class="secondary" onclick="cancelNewPalette()">Cancel</button>
+      </div>
+    </div>
+
+    <!-- Scan Tab -->
+    <div id="scan-tab" class="tab-content">
+      <div class="section">
+        <h3>Select Palette</h3>
+        <select id="scan-palette-select">
+          <option value="">Choose a palette...</option>
+        </select>
+        <button onclick="startScan()" id="scan-button" disabled>Scan Presentation</button>
+      </div>
+
+      <div id="scan-results" class="hidden">
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value" id="total-colors">0</div>
+            <div class="stat-label">COLORS FOUND</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value" id="off-brand-count">0</div>
+            <div class="stat-label">OFF-BRAND</div>
+          </div>
+        </div>
+
+        <h3>Color Analysis</h3>
+        <div class="results-container" id="results-container"></div>
+
+        <button onclick="applySelectedReplacements()" id="apply-button" disabled>Apply Selected Replacements</button>
+        <button class="secondary" onclick="selectAllOffBrand()">Select All Off-Brand</button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <div>Scanning presentation...</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let palettes = {};
+    let selectedPaletteId = null;
+    let scanResults = null;
+    let selectedReplacements = new Set();
+
+    // Initialize
+    loadPalettes();
+
+    // Tab switching
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+      event.target.classList.add('active');
+      document.getElementById(tabName + '-tab').classList.add('active');
+
+      if (tabName === 'scan') {
+        loadPalettesForScan();
+      }
+    }
+
+    // Palette Management
+    function loadPalettes() {
+      google.script.run
+        .withSuccessHandler(function(result) {
+          palettes = result;
+          renderPaletteList();
+        })
+        .getPalettes();
+    }
+
+    function renderPaletteList() {
+      const container = document.getElementById('palette-list');
+
+      if (Object.keys(palettes).length === 0) {
+        container.innerHTML = '<p style="color: #5f6368; text-align: center;">No palettes yet. Create one to get started!</p>';
+        return;
+      }
+
+      let html = '';
+      for (let id in palettes) {
+        const palette = palettes[id];
+        const isSelected = id === selectedPaletteId;
+
+        html += `
+          <div class="palette-item ${isSelected ? 'selected' : ''}" onclick="selectPalette('${id}')">
+            <div>
+              <strong>${palette.name}</strong>
+              <div class="palette-colors">
+                ${palette.colors.map(c => `<div class="palette-color-swatch" style="background-color: ${c.hex}"></div>`).join('')}
+              </div>
+            </div>
+            <button class="danger" onclick="deletePalette('${id}', event)" style="width: auto; padding: 6px 12px; margin: 0;">Delete</button>
+          </div>
+        `;
+      }
+
+      container.innerHTML = html;
+    }
+
+    function selectPalette(id) {
+      selectedPaletteId = id;
+      renderPaletteList();
+    }
+
+    function showNewPaletteForm() {
+      document.getElementById('new-palette-form').classList.remove('hidden');
+    }
+
+    function cancelNewPalette() {
+      document.getElementById('new-palette-form').classList.add('hidden');
+      clearPaletteForm();
+    }
+
+    function clearPaletteForm() {
+      document.getElementById('palette-name').value = '';
+      document.getElementById('color-primary').value = '#1a73e8';
+      document.getElementById('color-primary-hex').value = '#1a73e8';
+      document.getElementById('color-secondary').value = '#34a853';
+      document.getElementById('color-secondary-hex').value = '#34a853';
+      document.getElementById('color-accent').value = '#fbbc04';
+      document.getElementById('color-accent-hex').value = '#fbbc04';
+      document.getElementById('color-neutral').value = '#5f6368';
+      document.getElementById('color-neutral-hex').value = '#5f6368';
+    }
+
+    function savePalette() {
+      const name = document.getElementById('palette-name').value.trim();
+
+      if (!name) {
+        alert('Please enter a palette name');
+        return;
+      }
+
+      const paletteData = {
+        name: name,
+        colors: [
+          { role: 'primary', hex: document.getElementById('color-primary-hex').value },
+          { role: 'secondary', hex: document.getElementById('color-secondary-hex').value },
+          { role: 'accent', hex: document.getElementById('color-accent-hex').value },
+          { role: 'neutral', hex: document.getElementById('color-neutral-hex').value }
+        ]
+      };
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          if (result.success) {
+            showMessage('Palette saved successfully!', 'success');
+            loadPalettes();
+            cancelNewPalette();
+          } else {
+            showMessage('Error: ' + result.error, 'error');
+          }
+        })
+        .savePalette(paletteData);
+    }
+
+    function deletePalette(id, event) {
+      event.stopPropagation();
+
+      if (!confirm('Are you sure you want to delete this palette?')) {
+        return;
+      }
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          if (result.success) {
+            showMessage('Palette deleted', 'success');
+            if (selectedPaletteId === id) {
+              selectedPaletteId = null;
+            }
+            loadPalettes();
+          } else {
+            showMessage('Error: ' + result.error, 'error');
+          }
+        })
+        .deletePalette(id);
+    }
+
+    // Sync color picker with hex input
+    ['primary', 'secondary', 'accent', 'neutral'].forEach(role => {
+      document.getElementById('color-' + role).addEventListener('change', function(e) {
+        document.getElementById('color-' + role + '-hex').value = e.target.value;
+      });
+
+      document.getElementById('color-' + role + '-hex').addEventListener('change', function(e) {
+        document.getElementById('color-' + role).value = e.target.value;
+      });
+    });
+
+    // Scan functionality
+    function loadPalettesForScan() {
+      const select = document.getElementById('scan-palette-select');
+      select.innerHTML = '<option value="">Choose a palette...</option>';
+
+      for (let id in palettes) {
+        const option = document.createElement('option');
+        option.value = id;
+        option.textContent = palettes[id].name;
+        select.appendChild(option);
+      }
+    }
+
+    document.getElementById('scan-palette-select').addEventListener('change', function(e) {
+      document.getElementById('scan-button').disabled = !e.target.value;
+    });
+
+    function startScan() {
+      const paletteId = document.getElementById('scan-palette-select').value;
+
+      if (!paletteId) {
+        alert('Please select a palette');
+        return;
+      }
+
+      document.getElementById('loading').classList.remove('hidden');
+      document.getElementById('scan-results').classList.add('hidden');
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          document.getElementById('loading').classList.add('hidden');
+
+          if (result.success) {
+            scanResults = result;
+            renderScanResults(result);
+            document.getElementById('scan-results').classList.remove('hidden');
+          } else {
+            showMessage('Error: ' + result.error, 'error');
+          }
+        })
+        .scanPresentation(paletteId);
+    }
+
+    function renderScanResults(results) {
+      document.getElementById('total-colors').textContent = results.total_colors;
+
+      const offBrandCount = results.colors_found.filter(c => c.classification === 'off-brand').length;
+      document.getElementById('off-brand-count').textContent = offBrandCount;
+
+      const container = document.getElementById('results-container');
+      let html = '';
+
+      results.colors_found.forEach((color, index) => {
+        const badgeClass = color.classification.replace('-', '');
+
+        html += `
+          <div class="color-result">
+            <div class="color-result-header">
+              <div>
+                <strong>${color.hex}</strong>
+                <span class="badge ${badgeClass}">${color.classification.toUpperCase()}</span>
+              </div>
+            </div>
+
+            <div class="color-swatches">
+              <div class="color-swatch" style="background-color: ${color.hex}">${color.hex}</div>
+              ${color.suggested_hex ? `
+                <div class="arrow">→</div>
+                <div class="color-swatch" style="background-color: ${color.suggested_hex}">${color.suggested_hex}</div>
+              ` : '<div style="color: #5f6368; font-size: 12px;">Already on-brand!</div>'}
+            </div>
+
+            <div class="color-info">
+              Used ${color.count} time${color.count !== 1 ? 's' : ''} on slide${color.slide_ids.length !== 1 ? 's' : ''} ${color.slide_ids.join(', ')}
+            </div>
+
+            ${color.suggested_hex ? `
+              <div class="checkbox-container">
+                <input type="checkbox" id="replace-${index}" onchange="toggleReplacement(${index}, this.checked)">
+                <label for="replace-${index}" style="margin: 0; cursor: pointer;">Replace with ${color.suggested_role} color</label>
+              </div>
+            ` : ''}
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    function toggleReplacement(index, checked) {
+      if (checked) {
+        selectedReplacements.add(index);
+      } else {
+        selectedReplacements.delete(index);
+      }
+
+      document.getElementById('apply-button').disabled = selectedReplacements.size === 0;
+    }
+
+    function selectAllOffBrand() {
+      scanResults.colors_found.forEach((color, index) => {
+        if (color.classification === 'off-brand' && color.suggested_hex) {
+          selectedReplacements.add(index);
+          const checkbox = document.getElementById('replace-' + index);
+          if (checkbox) checkbox.checked = true;
+        }
+      });
+
+      document.getElementById('apply-button').disabled = selectedReplacements.size === 0;
+    }
+
+    function applySelectedReplacements() {
+      if (selectedReplacements.size === 0) {
+        alert('Please select at least one replacement');
+        return;
+      }
+
+      const replacements = Array.from(selectedReplacements).map(index => {
+        const color = scanResults.colors_found[index];
+        return {
+          fromHex: color.hex,
+          toHex: color.suggested_hex,
+          slideIds: color.slide_ids
+        };
+      });
+
+      document.getElementById('apply-button').disabled = true;
+      document.getElementById('apply-button').textContent = 'Applying...';
+
+      google.script.run
+        .withSuccessHandler(function(result) {
+          document.getElementById('apply-button').disabled = false;
+          document.getElementById('apply-button').textContent = 'Apply Selected Replacements';
+
+          if (result.success) {
+            showMessage(`Successfully replaced ${result.totalCount} color instances!`, 'success');
+            selectedReplacements.clear();
+            startScan(); // Re-scan to show updated results
+          } else {
+            showMessage('Error: ' + result.error, 'error');
+          }
+        })
+        .batchReplaceColors(replacements);
+    }
+
+    function showMessage(message, type) {
+      const className = type === 'success' ? 'success-message' : 'error-message';
+      const messageDiv = document.createElement('div');
+      messageDiv.className = className;
+      messageDiv.textContent = message;
+
+      document.getElementById('app').insertBefore(messageDiv, document.getElementById('app').firstChild);
+
+      setTimeout(() => {
+        messageDiv.remove();
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
