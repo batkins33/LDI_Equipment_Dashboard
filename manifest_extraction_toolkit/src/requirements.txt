@@ -1,7 +1,8 @@
-pypdf
-PyPDF2
-pandas
-openpyxl
-pytesseract
-Pillow
-PyMuPDF
+pypdf>=4.0.0
+pandas>=2.0.0
+openpyxl>=3.0.0
+pytesseract>=0.3.10
+Pillow>=10.0.0
+PyMuPDF>=1.23.0
+PyYAML>=6.0.0
+tqdm>=4.65.0

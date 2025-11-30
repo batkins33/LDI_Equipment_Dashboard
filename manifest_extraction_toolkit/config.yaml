@@ -1,0 +1,119 @@
+# Manifest Extraction Toolkit Configuration
+
+# OCR Settings
+ocr:
+  dpi: 300
+  engine: "PyMuPDF"  # Use PyMuPDF for all rendering
+  tesseract_oem: 3  # LSTM OCR Engine Mode
+  tesseract_psm_single_line: 7
+  tesseract_psm_block: 6
+
+# Handwriting Processing
+handwriting:
+  binarization_threshold: 180  # Reduced from 190 for better handwriting capture
+  median_filter_size: 3
+  bottom_band_top_percent: 0.82
+  bottom_band_bottom_percent: 0.97
+  bottom_band_left_percent: 0.05
+  bottom_band_right_percent: 0.95
+
+# ROI (Region of Interest) Positions
+roi:
+  # Positions relative to anchor bounding box
+  right_of:
+    dx: 10  # Horizontal offset from anchor right edge
+    w: 220  # Width of ROI
+    dy: -5  # Vertical offset from anchor top edge (negative = up)
+    h: 36   # Height of ROI
+
+  below_band:
+    top_pad: 8      # Padding below anchor
+    bottom: 70      # Height of band
+    left: 0.08      # Left edge (percent of page width)
+    right: 0.62     # Right edge (percent of page width)
+
+# Field-specific ROI overrides
+fields:
+  manifest_number:
+    dx: 12
+    w: 200
+    dy: -2
+    h: 40
+    digits_only: true
+
+  transporter_company:
+    top_pad: 8
+    bottom: 80
+    left: 0.08
+    right: 0.62
+
+  epa_id:
+    dx: 8
+    w: 220
+    dy: 4
+    h: 32
+
+  state_id:
+    dx: 8
+    w: 220
+    dy: 4
+    h: 32
+
+  phone:
+    dx: 8
+    w: 220
+    dy: 4
+    h: 32
+
+# Anchor tokens for field detection
+anchors:
+  manifest_number: ["manifest", "number"]
+  t1_company: ["transporter", "1", "company", "name"]
+  t1_us_epa_id: ["us", "epa", "id", "number"]
+  t1_state_id: ["state", "id"]
+  t1_phone: ["phone"]
+  t2_company: ["transporter", "2", "company", "name"]
+  t2_us_epa_id: ["us", "epa", "id", "number"]
+  t2_state_id: ["state", "id"]
+  t2_phone: ["phone"]
+
+# Validation Patterns
+validation:
+  manifest_number: "^\\d{8}$"
+  license_plate: "[A-Z0-9]{2,8}(?:-[A-Z0-9]{1,4})?$"
+  dot_id: "(?:US\\s*DOT|USDOT|DOT)\\D*(\\d{4,9})"
+  phone_length: 10
+
+# Performance Settings
+performance:
+  enable_caching: true
+  cache_size_mb: 500
+  enable_parallel: true
+  max_workers: 4  # CPU cores to use for parallel processing
+  batch_size: 10  # PDFs per batch
+
+# Processing Options
+processing:
+  max_pages_to_search: 3  # How many pages to search for anchors
+  skip_on_error: false     # Stop processing on first error
+  validate_output: true    # Run validation checks on extracted data
+  max_file_size_mb: 100    # Maximum PDF file size to process
+
+# Output Settings
+output:
+  default_format: "xlsx"
+  include_timestamp: true
+  save_debug_images: false  # Save cropped ROI images for debugging
+  debug_output_dir: "debug_output"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: null  # Set to path for file logging, null for console only
+
+# Default Paths (can be overridden by CLI arguments)
+paths:
+  input_dir: null
+  output_dir: "output"
+  combined_dir: null
