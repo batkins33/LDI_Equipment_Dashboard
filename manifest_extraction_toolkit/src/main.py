@@ -10,7 +10,7 @@ import argparse
 from pathlib import Path
 from typing import Iterable
 
-from PyPDF2 import PdfReader, PdfWriter
+from pypdf import PdfReader, PdfWriter
 
 
 def combine_pdfs(output_path: str | Path, input_paths: Iterable[str | Path]) -> Path:
