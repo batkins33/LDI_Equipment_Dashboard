@@ -1,51 +1,42 @@
 # BA Sandbox
 
-This repository contains small experiments with document analysis. The most complete example is the **receipt analyzer** located under `analyzer_projects/Lindamood_Ticket_Analyzer_v1`.
+> **Status: Archived** — Apps migrated to TANGENT_FORGE (December 2025)
 
-The receipt analyzer monitors a directory for new receipt images or PDFs, extracts information using OCR and simple regular expressions, then organizes the files into category folders while keeping a log in an Excel workbook. Each receipt's line items are exported to a separate **LineItems** sheet in the same workbook. Image receipts are cropped before OCR and renamed based on the detected vendor and date. Configuration such as input/output paths, tax rate and cropping behaviour is stored in ``config.yaml``; cropping can be disabled by setting ``auto_crop_enabled: false`` in that file if it causes issues with your photos.
+This repository was used for small experiments with document analysis and Google Workspace add-ons. Active development has moved to the TANGENT_FORGE monorepo.
 
-The `WM_Invoice_Parser` directory holds earlier invoice extraction tests and is not integrated with the receipt analyzer.
+---
 
-## Development Notes
-- Unit tests cover the receipt analyzer utilities. Run them with:
-  ```bash
-  PYTHONPATH=analyzer_projects/Lindamood_Ticket_Analyzer_v1 pytest
-  ```
-- Multi-page PDFs can be parsed page-by-page using the new `process_receipt_pages` helper.
-- Further information is available in `docs/receipt_analyzer_user_guide.md`, `docs/receipt_analyzer_technical_details.md` and `docs/config_reference.md`.
+## Migration History
 
-## Streamlit Review UI
-Run a small web UI to review and correct logged receipts:
+The following projects were migrated on 2025-12-08:
 
-```bash
-streamlit run streamlit_app.py
-```
+| Original | Migrated To | Description |
+|----------|-------------|-------------|
+| `brand-color-harmonizer/` | `TANGENT_FORGE/products/brand-color-harmonizer/` | Google Slides add-on for brand color enforcement |
+| `invoice-sorter/` | `TANGENT_FORGE/products/invoice-sorter/` | AP automation for invoice routing |
+| `rubric-to-comment-ai/` | `TANGENT_FORGE/products/rubric-to-comment-ai/` | Google Docs add-on for AI grading feedback |
+| `manifest_extraction_toolkit/` | `TANGENT_FORGE/products/sitesync/manifests/` | EPA manifest OCR extraction (construction) |
+| `essaycoach-hybrid/` | (realized as `prompt-finder`) | Concept evolved into PathForge product |
 
-The app loads `receipt_log.xlsx`, supports inline edits and bulk category
-corrections by vendor, and can upload new receipt files into the intake
-folder.
+---
 
-## ML-Based Categorization
-Train a simple scikit-learn model from the existing log and use it for future
-categorization:
+## Historical Context
 
-```bash
-python -m receipt_processing.ml_categorizer <path/to/receipt_log.xlsx>
-```
+This repo originally contained:
 
-This creates `receipt_category_model.joblib`. The main pipeline will use it
-automatically when present.
+- **Receipt Analyzer** — OCR pipeline for receipt processing (evolved into ReceiptIQ)
+- **Lindamood Ticket Analyzer** — Construction ticket processing (evolved into SiteSync/TruckTickets)
+- **WM Invoice Parser** — Early invoice extraction tests
+- **Manifest PDF tools** — EPA manifest handling
 
+These concepts have been productized and organized in TANGENT_FORGE under:
+- `products/receiptiq/`
+- `products/sitesync/`
+- `products/invoice-sorter/`
 
-## Combine Manifest PDFs
+---
 
-The `combine_manifest_pdf` module provides a helper and CLI to merge multiple
-manifest PDF files into a single document.
+## See Also
 
-- [User Guide](docs/combine_manifest_pdf_user_guide.md)
-- [Technical Details](docs/combine_manifest_pdf_technical_details.md)
-
-Example usage:
-```bash
-python -m combine_manifest_pdf.main combined.pdf manifest1.pdf manifest2.pdf
-```
+- [TANGENT_FORGE Repository](https://github.com/tangentforge/TANGENT_FORGE)
+- [TANGENT_FORGE DEV_INDEX](../../../TANGENT_FORGE/canonical/DEV_INDEX.md)
