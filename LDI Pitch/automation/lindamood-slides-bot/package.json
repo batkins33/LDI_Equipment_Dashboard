@@ -1,0 +1,30 @@
+{
+  "name": "lindamood-slides-bot",
+  "version": "1.0.0",
+  "description": "Playwright automation that builds Google Slides decks from Lindamood website branding",
+  "main": "index.js",
+  "scripts": {
+    "auth": "npx tsx slides/auth.ts",
+    "brand:extract": "npx tsx brand/extract_brand.ts",
+    "deck:build": "npx tsx slides/build_deck.ts",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "postinstall": "npx playwright install chromium"
+  },
+  "keywords": [
+    "playwright",
+    "google-slides",
+    "automation",
+    "lindamood"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.50.0",
+    "@types/node": "^20.0.0",
+    "playwright": "^1.50.0",
+    "ts-node": "^10.9.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0"
+  }
+}
