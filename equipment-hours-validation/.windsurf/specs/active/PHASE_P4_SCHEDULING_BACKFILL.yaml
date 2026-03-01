@@ -1,0 +1,68 @@
+project: Equipment Hours Validation
+phase_number: P4
+phase_name: "Scheduling, Backfill, and Health Checks"
+description: "Implement scheduling for data ingestion and processing, backfill logic for historical data, and health checks for system monitoring."
+context: "This phase ensures that the data pipeline runs on a schedule to provide timely updates. It includes backfill capabilities to recompute historical data and health checks to monitor system performance and data quality."
+
+reads:
+  - "02-equipment-hours-validation/docs/ETL_SCHEDULE.md"
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+
+phases:
+  - name: "Phase P4 — Scheduling, Backfill, and Health Checks"
+    tasks:
+      - task_id: "p4-scheduling"
+        name: "Scheduling for Data Pipeline"
+        description: "Set up scheduling for data ingestion, normalization, and reconciliation processes."
+        acceptance_criteria:
+          - "Daily ingestion scheduled to provide provisional data by 6am."
+          - "Approval overlay and nightly backfill are scheduled."
+        implementation_notes: "Use cron jobs or a workflow scheduler like Airflow for POC. Define schedules as per ETL_SCHEDULE.md."
+        documentation:
+          - "Document scheduling setup in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_scheduling.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/scheduling/scheduler.py"
+          - "02-equipment-hours-validation/tests/test_scheduling.py"
+          - "02-equipment-hours-validation/config/schedules.yaml"
+
+      - task_id: "p4-backfill"
+        name: "Backfill Logic for Historical Data"
+        description: "Implement logic to backfill data for the last 30 days deterministically."
+        acceptance_criteria:
+          - "Backfill script recomputes data for specified date range."
+          - "Backfill handles overlaps and maintains data consistency with idempotent operations."
+        implementation_notes: "Create a script to re-run ingestion and processing for historical data. Ensure idempotency to avoid duplicates."
+        documentation:
+          - "Document backfill process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_backfill.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/scheduling/backfill.py"
+          - "02-equipment-hours-validation/tests/test_backfill.py"
+
+      - task_id: "p4-health-checks"
+        name: "Health Checks for System Monitoring"
+        description: "Develop health checks to monitor data pipeline and data quality."
+        acceptance_criteria:
+          - "Health checks monitor connector status, data freshness, and exception counts."
+          - "Alerts are generated for failures or anomalies."
+        implementation_notes: "Implement simple health endpoints or scripts to check system status. Use logging for alerts in POC."
+        documentation:
+          - "Document health checks in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_health_checks.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/monitoring/health.py"
+          - "02-equipment-hours-validation/tests/test_health_checks.py"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_scheduling.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_backfill.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_health_checks.py"
+
+    done_when: "Scheduling is implemented, backfill logic is functional, health checks are in place, and all verification steps pass."
+
+follow_up:
+  - "Proceed to Phase P5 for dashboard views, runbooks, and UAT with mock fixtures."

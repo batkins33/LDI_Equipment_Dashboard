@@ -1,0 +1,17 @@
+project: equipment-hours-validation
+version: 0.1
+timezone: America/Chicago
+
+phases:
+  - id: P0
+    name: Repo + Schema + Config
+  - id: P1
+    name: Connectors + Bronze
+  - id: P2
+    name: Silver Normalization
+  - id: P3
+    name: Gold Recon + Flags + Exceptions
+  - id: P4
+    name: Scheduling + Backfill + Health Checks
+  - id: P5
+    name: Dashboard Views + Runbooks

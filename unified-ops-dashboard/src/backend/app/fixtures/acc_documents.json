@@ -1,0 +1,14 @@
+[
+  {
+    "id": "acc_d_001",
+    "project_id": "acc_p_001",
+    "name": "Contract.pdf",
+    "type": "pdf"
+  },
+  {
+    "id": "acc_d_002",
+    "project_id": "acc_p_001",
+    "name": "Schedule.xer",
+    "type": "xer"
+  }
+]

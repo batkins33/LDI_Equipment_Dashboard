@@ -1,0 +1,85 @@
+project: Equipment Hours Validation
+phase_number: P1
+phase_name: "Connectors and Bronze Store"
+description: "Develop connectors to pull data from various sources and store raw data in bronze layer."
+context: "This phase focuses on data ingestion from HeavyJob, Safety, Equipment360, and Telematics. The goal is to fetch raw data and store it without transformation for further processing in later phases."
+
+reads:
+  - "02-equipment-hours-validation/docs/ETL_SCHEDULE.md"
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+
+phases:
+  - name: "Phase P1 — Connectors and Bronze Store"
+    tasks:
+      - task_id: "p1-heavyjob-connector"
+        name: "HeavyJob Connector"
+        description: "Develop a connector to pull timecard data from HCSS HeavyJob."
+        acceptance_criteria:
+          - "Connector successfully retrieves timecard headers and equipment hours."
+          - "Data is stored in bronze layer as raw JSON or CSV."
+        implementation_notes: "Use mock data or API stubs for POC. Store data in a raw format without transformation."
+        documentation:
+          - "Document HeavyJob connector in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_heavyjob_connector.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/connectors/heavyjob.py"
+          - "02-equipment-hours-validation/tests/test_heavyjob_connector.py"
+          - "02-equipment-hours-validation/data/bronze/heavyjob/"
+
+      - task_id: "p1-safety-connector"
+        name: "Safety Connector"
+        description: "Develop a connector to pull inspection data from HCSS Safety."
+        acceptance_criteria:
+          - "Connector successfully retrieves inspection data with meter readings and photo counts."
+          - "Data is stored in bronze layer as raw JSON or CSV."
+        implementation_notes: "Use mock data for POC. Store data in a raw format."
+        documentation:
+          - "Document Safety connector in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_safety_connector.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/connectors/safety.py"
+          - "02-equipment-hours-validation/tests/test_safety_connector.py"
+          - "02-equipment-hours-validation/data/bronze/safety/"
+
+      - task_id: "p1-equipment360-connector"
+        name: "Equipment360 Connector"
+        description: "Develop a connector to pull meter readings from HCSS Equipment360."
+        acceptance_criteria:
+          - "Connector successfully retrieves meter readings."
+          - "Data is stored in bronze layer as raw JSON or CSV."
+        implementation_notes: "Use mock data for POC. Store data in a raw format."
+        documentation:
+          - "Document Equipment360 connector in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_equipment360_connector.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/connectors/equipment360.py"
+          - "02-equipment-hours-validation/tests/test_equipment360_connector.py"
+          - "02-equipment-hours-validation/data/bronze/equipment360/"
+
+      - task_id: "p1-telematics-connector"
+        name: "Telematics Connector"
+        description: "Develop a connector to pull engine hours from Telematics/GPS systems."
+        acceptance_criteria:
+          - "Connector successfully retrieves engine hours data."
+          - "Data is stored in bronze layer as raw JSON or CSV."
+        implementation_notes: "Use mock data for POC. Store data in a raw format."
+        documentation:
+          - "Document Telematics connector in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_telematics_connector.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/connectors/telematics.py"
+          - "02-equipment-hours-validation/tests/test_telematics_connector.py"
+          - "02-equipment-hours-validation/data/bronze/telematics/"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_*_connector.py"
+      - "ls -la 02-equipment-hours-validation/data/bronze/*/"
+
+    done_when: "All connectors are implemented, tested with mock data, raw data is stored in bronze layer, and all verification steps pass."
+
+follow_up:
+  - "Proceed to Phase P2 for silver layer normalization and crosswalk mapping."

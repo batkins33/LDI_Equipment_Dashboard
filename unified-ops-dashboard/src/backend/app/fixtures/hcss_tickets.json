@@ -1,0 +1,16 @@
+[
+  {
+    "id": "t_001",
+    "job_id": "hj_job_001",
+    "vendor_id": "v_001",
+    "tons": 24.5,
+    "material": "Concrete"
+  },
+  {
+    "id": "t_002",
+    "job_id": "hj_job_001",
+    "vendor_id": "v_002",
+    "tons": 26.0,
+    "material": "Asphalt"
+  }
+]

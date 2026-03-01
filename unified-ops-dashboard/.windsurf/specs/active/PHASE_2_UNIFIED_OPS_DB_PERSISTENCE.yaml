@@ -1,0 +1,76 @@
+project: Unified Ops Dashboard
+phase_number: 2
+phase_name: "Database Persistence Integration"
+description: "Replace in-memory storage with real database persistence for the Unified Ops Dashboard."
+context: "This phase transitions the backend from using in-memory storage to a persistent database solution (SQLite or Postgres for POC) to store unified jobs, mappings, report runs, and audit logs."
+
+reads:
+  - "01-unified-ops-mock-mvp/README.md"
+  - "01-unified-ops-mock-mvp/docs/API_CONTRACT.md"
+  - "01-unified-ops-mock-mvp/backend/app/storage.py"
+  - "01-unified-ops-mock-mvp/backend/app/routers/canonical.py"
+
+phases:
+  - name: "Phase 2 — Database Persistence Integration"
+    tasks:
+      - task_id: "db-schema-design"
+        name: "Database Schema Design"
+        description: "Design database schema for storing unified jobs, mappings, report runs, and audit logs."
+        acceptance_criteria:
+          - "Schema supports all data structures currently held in memory."
+          - "Schema includes necessary indexes for performance."
+        implementation_notes: "Create tables mirroring the structure of in-memory dictionaries in canonical.py. Use SQLite for simplicity in POC."
+        documentation:
+          - "Document database schema in backend/docs/DATABASE.md."
+        testing:
+          - "echo 'Schema design reviewed manually.'"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/db_schema.sql"
+          - "01-unified-ops-mock-mvp/backend/docs/DATABASE.md"
+
+      - task_id: "db-setup"
+        name: "Database Setup and Initialization"
+        description: "Set up database connection and initialize with schema."
+        acceptance_criteria:
+          - "Database is created and schema is applied successfully."
+          - "Connection pool is configured for FastAPI."
+        implementation_notes: "Use SQLAlchemy for ORM and database connection management. Initialize SQLite database file."
+        documentation:
+          - "Document database setup in backend/README.md."
+        testing:
+          - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_db_connection.py"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/app/db.py"
+          - "01-unified-ops-mock-mvp/backend/tests/test_db_connection.py"
+          - "01-unified-ops-mock-mvp/backend/data/db.sqlite"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/backend/app/main.py"
+
+      - task_id: "db-migration"
+        name: "Migrate In-Memory to DB Storage"
+        description: "Update API endpoints to use database instead of in-memory storage."
+        acceptance_criteria:
+          - "All CRUD operations in canonical.py use database queries."
+          - "Existing in-memory data structure is removed or deprecated."
+        implementation_notes: "Modify canonical.py to use SQLAlchemy models for data persistence. Ensure backward compatibility for API responses."
+        documentation:
+          - "Document API changes in backend/docs/API_CHANGES.md."
+        testing:
+          - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_canonical_db.py"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/app/models.py"
+          - "01-unified-ops-mock-mvp/backend/tests/test_canonical_db.py"
+          - "01-unified-ops-mock-mvp/backend/docs/API_CHANGES.md"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/backend/app/routers/canonical.py"
+
+    verify:
+      - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_db_connection.py"
+      - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_canonical_db.py"
+      - "uvicorn app.main:app --reload --port 8081 --chdir 01-unified-ops-mock-mvp/backend"
+      - "echo 'Manual test: Use frontend or curl to verify API endpoints store data in database.'"
+
+    done_when: "Database schema is implemented, API endpoints use database for persistence, tests pass, and manual verification confirms data storage."
+
+follow_up:
+  - "Proceed to Phase 3 for replacing mock fixtures with real API connectors."

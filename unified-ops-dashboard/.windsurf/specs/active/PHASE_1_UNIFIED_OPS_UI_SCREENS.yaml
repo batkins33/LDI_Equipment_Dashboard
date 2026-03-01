@@ -1,0 +1,103 @@
+project: Unified Ops Dashboard
+phase_number: 1
+phase_name: "UI Screens Implementation"
+description: "Implement the 5-screen UI for the Unified Ops Dashboard as outlined in the MVP scope."
+context: "This phase focuses on expanding the existing React frontend to include all necessary screens for the MVP: Systems, Jobs, Mappings, Reports, and Audit Log. The backend mock API is already in place to support UI development."
+
+reads:
+  - "01-unified-ops-mock-mvp/README.md"
+  - "01-unified-ops-mock-mvp/docs/MVP_OVERVIEW.md"
+  - "01-unified-ops-mock-mvp/docs/API_CONTRACT.md"
+  - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+phases:
+  - name: "Phase 1 — UI Screens Implementation"
+    tasks:
+      - task_id: "ui-systems-screen"
+        name: "Systems Screen"
+        description: "Create the Systems screen to display connectivity status for ACC, Procore, and HCSS."
+        acceptance_criteria:
+          - "Systems screen displays mock connection status for all systems."
+          - "UI matches design standards with responsive layout."
+        implementation_notes: "Use React components to display system status fetched from mock API endpoints."
+        documentation:
+          - "Document Systems screen in frontend/README.md."
+        testing:
+          - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/frontend/src/components/Systems.jsx"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+      - task_id: "ui-jobs-screen"
+        name: "Jobs Screen"
+        description: "Create the Jobs screen to manage unified job bindings across systems."
+        acceptance_criteria:
+          - "Jobs screen allows viewing and creating unified job mappings."
+          - "Data is fetched from /api/unified-jobs endpoint."
+        implementation_notes: "Implement CRUD operations for job bindings using the canonical API."
+        documentation:
+          - "Document Jobs screen in frontend/README.md."
+        testing:
+          - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/frontend/src/components/Jobs.jsx"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+      - task_id: "ui-mappings-screen"
+        name: "Mappings Screen"
+        description: "Create the Mappings screen to manage vendor and cost code mappings."
+        acceptance_criteria:
+          - "Mappings screen supports viewing and editing vendor and cost code mappings."
+          - "Data is fetched from /api/vendor-maps and /api/cost-code-maps endpoints."
+        implementation_notes: "Use React forms for editing mappings, connect to canonical API endpoints."
+        documentation:
+          - "Document Mappings screen in frontend/README.md."
+        testing:
+          - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/frontend/src/components/Mappings.jsx"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+      - task_id: "ui-reports-screen"
+        name: "Reports Screen"
+        description: "Create the Reports screen to run and view report results like Daily Trucking Summary."
+        acceptance_criteria:
+          - "Reports screen allows running reports and viewing historical runs."
+          - "Data is fetched from /api/report-runs and /api/reports/daily-trucking-summary endpoints."
+        implementation_notes: "Implement report triggering and results display using API calls."
+        documentation:
+          - "Document Reports screen in frontend/README.md."
+        testing:
+          - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/frontend/src/components/Reports.jsx"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+      - task_id: "ui-audit-log-screen"
+        name: "Audit Log Screen"
+        description: "Create the Audit Log screen to display change history."
+        acceptance_criteria:
+          - "Audit Log screen displays chronological log of actions."
+          - "Data is fetched from /api/audit-log endpoint."
+        implementation_notes: "Display audit log entries in a tabular or timeline format from API data."
+        documentation:
+          - "Document Audit Log screen in frontend/README.md."
+        testing:
+          - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/frontend/src/components/AuditLog.jsx"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/frontend/src/App.jsx"
+
+    verify:
+      - "npm run dev --prefix 01-unified-ops-mock-mvp/frontend"
+      - "echo 'Manual UI test: Verify all 5 screens (Systems, Jobs, Mappings, Reports, Audit Log) are accessible and display data from mock API.'"
+
+    done_when: "All 5 UI screens are implemented, connected to mock API endpoints, and manual verification confirms functionality."
+
+follow_up:
+  - "Proceed to Phase 2 for database persistence integration to replace in-memory storage."

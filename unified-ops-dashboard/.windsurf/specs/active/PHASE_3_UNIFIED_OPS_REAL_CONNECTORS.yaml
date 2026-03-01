@@ -1,0 +1,80 @@
+project: Unified Ops Dashboard
+phase_number: 3
+phase_name: "Real API Connectors"
+description: "Replace mock data fixtures with real API connectors for ACC, Procore, and HCSS."
+context: "This phase transitions the backend from using mock data to connecting with real APIs for ACC, Procore, and HCSS to fetch actual project and operational data. It requires handling authentication, rate limiting, and error handling for external services."
+
+reads:
+  - "01-unified-ops-mock-mvp/README.md"
+  - "01-unified-ops-mock-mvp/docs/API_CONTRACT.md"
+  - "01-unified-ops-mock-mvp/backend/app/routers/acc.py"
+  - "01-unified-ops-mock-mvp/backend/app/routers/procore.py"
+  - "01-unified-ops-mock-mvp/backend/app/routers/hcss.py"
+
+phases:
+  - name: "Phase 3 — Real API Connectors"
+    tasks:
+      - task_id: "real-acc-connector"
+        name: "ACC API Connector"
+        description: "Implement real API connector for ACC to replace mock data."
+        acceptance_criteria:
+          - "Connector successfully authenticates and retrieves project data from ACC API."
+          - "Error handling and rate limiting are implemented."
+        implementation_notes: "Use ACC API documentation to implement authentication (OAuth or API key) and endpoints for projects and documents. Store credentials securely in configuration."
+        documentation:
+          - "Document ACC connector setup and authentication in backend/docs/CONNECTORS.md."
+        testing:
+          - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_acc_connector.py"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/app/connectors/acc.py"
+          - "01-unified-ops-mock-mvp/backend/tests/test_acc_connector.py"
+          - "01-unified-ops-mock-mvp/backend/docs/CONNECTORS.md"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/backend/app/routers/acc.py"
+          - "01-unified-ops-mock-mvp/backend/config/settings.yaml"
+
+      - task_id: "real-procore-connector"
+        name: "Procore API Connector"
+        description: "Implement real API connector for Procore to replace mock data."
+        acceptance_criteria:
+          - "Connector successfully authenticates and retrieves project and RFI data from Procore API."
+          - "Error handling and rate limiting are implemented."
+        implementation_notes: "Implement OAuth2 authentication for Procore API. Fetch projects and RFIs with pagination support."
+        documentation:
+          - "Document Procore connector setup in backend/docs/CONNECTORS.md."
+        testing:
+          - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_procore_connector.py"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/app/connectors/procore.py"
+          - "01-unified-ops-mock-mvp/backend/tests/test_procore_connector.py"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/backend/app/routers/procore.py"
+
+      - task_id: "real-hcss-connector"
+        name: "HCSS API Connector"
+        description: "Implement real API connector for HCSS to replace mock data."
+        acceptance_criteria:
+          - "Connector successfully authenticates and retrieves business units, jobs, cost codes, vendors, and tickets from HCSS API."
+          - "Error handling and rate limiting are implemented."
+        implementation_notes: "Implement authentication for HCSS API. Handle multiple endpoints for different data types with appropriate query parameters."
+        documentation:
+          - "Document HCSS connector setup in backend/docs/CONNECTORS.md."
+        testing:
+          - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_hcss_connector.py"
+        files_to_create:
+          - "01-unified-ops-mock-mvp/backend/app/connectors/hcss.py"
+          - "01-unified-ops-mock-mvp/backend/tests/test_hcss_connector.py"
+        files_to_modify:
+          - "01-unified-ops-mock-mvp/backend/app/routers/hcss.py"
+
+    verify:
+      - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_acc_connector.py"
+      - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_procore_connector.py"
+      - "python -m pytest 01-unified-ops-mock-mvp/backend/tests/test_hcss_connector.py"
+      - "uvicorn app.main:app --reload --port 8081 --chdir 01-unified-ops-mock-mvp/backend"
+      - "echo 'Manual test: Use frontend or curl to verify API endpoints fetch real data from ACC, Procore, and HCSS.'"
+
+    done_when: "Real API connectors are implemented for ACC, Procore, and HCSS, tests pass with mock or sandbox credentials, and manual verification confirms data retrieval from external APIs."
+
+follow_up:
+  - "Review system for production readiness, focusing on security of API credentials and performance of real data fetching."

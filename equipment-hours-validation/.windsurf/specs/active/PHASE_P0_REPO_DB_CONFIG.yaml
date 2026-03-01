@@ -1,0 +1,69 @@
+project: Equipment Hours Validation
+phase_number: P0
+phase_name: "Repo, DB, and Config Loader Setup"
+description: "Set up the basic repository structure, database, and configuration loader for the Equipment Hours Validation MVP."
+context: "This is the initial phase to establish the foundation for the project. It ensures that the development environment is ready with necessary configurations and database schema before proceeding to data ingestion and processing phases."
+
+reads:
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+  - "02-equipment-hours-validation/specs/db_schema.sql"
+
+phases:
+  - name: "Phase P0 — Repo, DB, and Config Loader"
+    tasks:
+      - task_id: "p0-repo-setup"
+        name: "Repository Structure Setup"
+        description: "Create the basic directory structure for the project."
+        acceptance_criteria:
+          - "Directories for source code, tests, and documentation are created."
+        implementation_notes: "Follow standard Python project structure."
+        documentation:
+          - "Update README.md with project structure overview."
+        testing:
+          - "ls -la 02-equipment-hours-validation/"
+        files_to_create:
+          - "02-equipment-hours-validation/src/"
+          - "02-equipment-hours-validation/tests/"
+          - "02-equipment-hours-validation/config/"
+
+      - task_id: "p0-db-setup"
+        name: "Database Setup"
+        description: "Implement the database schema as defined in specs."
+        acceptance_criteria:
+          - "Database schema is created successfully."
+          - "All tables from db_schema.sql are present."
+        implementation_notes: "Use SQLite for POC or PostgreSQL if specified. Execute the SQL script to create tables."
+        documentation:
+          - "Document database setup in HOW_TO_RUN.md."
+        testing:
+          - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT name FROM sqlite_master WHERE type="table";'"  # Adjust for actual DB used
+        files_to_create:
+          - "02-equipment-hours-validation/data/db.sqlite"
+        files_to_modify:
+          - "02-equipment-hours-validation/specs/db_schema.sql"
+
+      - task_id: "p0-config-loader"
+        name: "Configuration Loader"
+        description: "Create a configuration loader to manage environment variables and settings."
+        acceptance_criteria:
+          - "Config loader reads from environment variables and YAML files."
+          - "Config loader is tested with sample configurations."
+        implementation_notes: "Use libraries like `python-dotenv` and `pyyaml` for loading configurations."
+        documentation:
+          - "Document configuration setup in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_config.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/config.py"
+          - "02-equipment-hours-validation/tests/test_config.py"
+          - "02-equipment-hours-validation/config/settings.yaml"
+
+    verify:
+      - "ls -la 02-equipment-hours-validation/"
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT name FROM sqlite_master WHERE type="table";'"  # Adjust for actual DB
+      - "python -m pytest 02-equipment-hours-validation/tests/test_config.py"
+
+    done_when: "Repository structure is set up, database schema is implemented, configuration loader is functional, and all verification steps pass."
+
+follow_up:
+  - "Proceed to Phase P1 for implementing connectors and bronze data store."
