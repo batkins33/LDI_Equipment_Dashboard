@@ -1,0 +1,14 @@
+{
+  "base_url": "https://api.hcssapps.com",
+  "oauth": {
+    "token_url": "https://api.hcssapps.com/identity/connect/token",
+    "client_id": "YOUR_CLIENT_ID",
+    "client_secret": "YOUR_SECRET",
+    "scopes": [
+      "equipment360.read"
+    ]
+  },
+  "overlap": {
+    "meter_days": 7
+  }
+}

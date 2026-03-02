@@ -1,0 +1,616 @@
+{
+  "equipment": [
+    "EQ-001",
+    "EQ-002",
+    "EQ-003",
+    "EQ-004",
+    "EQ-005",
+    "EQ-006",
+    "EQ-007",
+    "EQ-008",
+    "EQ-009",
+    "EQ-010"
+  ],
+  "readings": [
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11092.32
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11115.91
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11141.48
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11168.64
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11189.59
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11204.85
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11226.69
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11242.47
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11269.53
+    },
+    {
+      "equipment_id": "EQ-001",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11291.25
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 14963.02
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 14984.56
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15006.21
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15027.66
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15045.95
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15074.08
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15102.33
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15127.2
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15148.04
+    },
+    {
+      "equipment_id": "EQ-002",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 15173.08
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12904.28
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12921.77
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12942.27
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12970.38
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12992.1
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 13021.9
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 13044.64
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 13063.29
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 13091.02
+    },
+    {
+      "equipment_id": "EQ-003",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 13111.41
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9425.64
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9441.0
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9465.32
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9493.51
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9519.93
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9544.94
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9572.67
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9598.64
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9615.25
+    },
+    {
+      "equipment_id": "EQ-004",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9637.77
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5783.97
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5806.89
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5825.61
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5842.54
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5865.22
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5886.22
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5905.57
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5932.68
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5949.96
+    },
+    {
+      "equipment_id": "EQ-005",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 5970.88
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8142.33
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8165.63
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8191.57
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8209.33
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8224.77
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8249.44
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8275.98
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8292.36
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8310.32
+    },
+    {
+      "equipment_id": "EQ-006",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8328.29
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 10959.76
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 10984.17
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11008.71
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11023.88
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11049.28
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11066.91
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11084.8
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11113.77
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11135.1
+    },
+    {
+      "equipment_id": "EQ-007",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11161.54
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7828.02
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7843.78
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7865.45
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7884.71
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7908.54
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7935.68
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7958.03
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 7987.06
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8013.52
+    },
+    {
+      "equipment_id": "EQ-008",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 8031.52
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 11995.26
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12022.55
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12051.49
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12081.08
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12109.34
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12135.06
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12153.68
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12174.77
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12201.85
+    },
+    {
+      "equipment_id": "EQ-009",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 12217.17
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-01-30",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9534.51
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-02",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9561.61
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-05",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9588.82
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-08",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9614.38
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-11",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9634.25
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-14",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9652.8
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-17",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9679.32
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-20",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9700.51
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-23",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9725.76
+    },
+    {
+      "equipment_id": "EQ-010",
+      "reading_date": "2026-02-26",
+      "meter_type": "ENGINE_HOURS",
+      "meter_value": 9748.79
+    }
+  ]
+}

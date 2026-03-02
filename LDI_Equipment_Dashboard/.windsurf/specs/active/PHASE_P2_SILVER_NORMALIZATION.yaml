@@ -1,0 +1,102 @@
+project: Equipment Hours Validation
+phase_number: P2
+phase_name: "Silver Normalization and Crosswalk Mapping"
+description: "Transform raw bronze data into normalized silver layer facts with crosswalk mapping for equipment IDs across systems."
+context: "This phase focuses on cleaning and normalizing data from various sources into a consistent format. It also establishes mappings between different equipment identifiers used in different systems to ensure data integrity."
+
+reads:
+  - "02-equipment-hours-validation/docs/CANONICAL_SCHEMA.md"
+  - "02-equipment-hours-validation/specs/db_schema.sql"
+
+phases:
+  - name: "Phase P2 — Silver Normalization and Crosswalk Mapping"
+    tasks:
+      - task_id: "p2-normalize-heavyjob"
+        name: "Normalize HeavyJob Data"
+        description: "Transform raw HeavyJob timecard data into normalized silver layer facts."
+        acceptance_criteria:
+          - "Timecard headers and equipment hours are normalized into database tables."
+          - "Data matches schema defined in db_schema.sql for f_timecard_header and f_timecard_equipment_hours."
+        implementation_notes: "Parse JSON/CSV from bronze layer, clean data, and insert into database tables. Use idempotent upserts to handle duplicates."
+        documentation:
+          - "Document HeavyJob normalization process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_heavyjob_normalization.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/normalization/heavyjob.py"
+          - "02-equipment-hours-validation/tests/test_heavyjob_normalization.py"
+          - "02-equipment-hours-validation/data/silver/heavyjob/"
+
+      - task_id: "p2-normalize-safety"
+        name: "Normalize Safety Data"
+        description: "Transform raw Safety inspection data into normalized silver layer facts."
+        acceptance_criteria:
+          - "Inspection data is normalized into database tables."
+          - "Data matches schema defined in db_schema.sql for f_inspection_equipment_day."
+        implementation_notes: "Parse JSON/CSV from bronze layer, clean data, and insert into database tables. Use idempotent upserts."
+        documentation:
+          - "Document Safety normalization process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_safety_normalization.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/normalization/safety.py"
+          - "02-equipment-hours-validation/tests/test_safety_normalization.py"
+          - "02-equipment-hours-validation/data/silver/safety/"
+
+      - task_id: "p2-normalize-equipment360"
+        name: "Normalize Equipment360 Data"
+        description: "Transform raw Equipment360 meter readings into normalized silver layer facts."
+        acceptance_criteria:
+          - "Meter readings are normalized into database tables."
+          - "Data matches schema defined in db_schema.sql for f_e360_meter_reading."
+        implementation_notes: "Parse JSON/CSV from bronze layer, clean data, and insert into database tables. Use idempotent upserts."
+        documentation:
+          - "Document Equipment360 normalization process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_equipment360_normalization.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/normalization/equipment360.py"
+          - "02-equipment-hours-validation/tests/test_equipment360_normalization.py"
+          - "02-equipment-hours-validation/data/silver/equipment360/"
+
+      - task_id: "p2-normalize-telematics"
+        name: "Normalize Telematics Data"
+        description: "Transform raw Telematics engine hours into normalized silver layer facts."
+        acceptance_criteria:
+          - "Engine hours data is normalized into database tables."
+          - "Data matches schema defined in db_schema.sql for f_telematics_equipment_day."
+        implementation_notes: "Parse JSON/CSV from bronze layer, clean data, and insert into database tables. Use idempotent upserts."
+        documentation:
+          - "Document Telematics normalization process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_telematics_normalization.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/normalization/telematics.py"
+          - "02-equipment-hours-validation/tests/test_telematics_normalization.py"
+          - "02-equipment-hours-validation/data/silver/telematics/"
+
+      - task_id: "p2-crosswalk-mapping"
+        name: "Crosswalk Mapping for Equipment IDs"
+        description: "Create mappings for equipment IDs across different systems."
+        acceptance_criteria:
+          - "Equipment IDs are mapped across HeavyJob, Safety, Equipment360, and Telematics in map_equipment_external table."
+          - "Mappings are stored in database with primary flag and effective dates."
+        implementation_notes: "Use mock mapping data for POC. Implement logic to update mappings based on new data."
+        documentation:
+          - "Document crosswalk mapping process in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_crosswalk_mapping.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/mapping/crosswalk.py"
+          - "02-equipment-hours-validation/tests/test_crosswalk_mapping.py"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_*_normalization.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_crosswalk_mapping.py"
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM f_timecard_header LIMIT 5;'"  # Adjust for actual DB
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM map_equipment_external LIMIT 5;'"  # Adjust for actual DB
+
+    done_when: "All data sources are normalized into silver layer, equipment ID mappings are established, and all verification steps pass."
+
+follow_up:
+  - "Proceed to Phase P3 for gold layer reconciliation, flags, and exceptions generation."

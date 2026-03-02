@@ -1,0 +1,72 @@
+project: Equipment Hours Validation
+phase_number: P3
+phase_name: "Gold Reconciliation, Flags, and Exceptions"
+description: "Build gold layer tables for equipment-day reconciliation, generate flags for discrepancies, and create exceptions for action."
+context: "This phase aggregates normalized data from silver layer into gold layer tables to provide a reconciled view of equipment hours across sources. It identifies discrepancies with flags and creates actionable exceptions for review."
+
+reads:
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+  - "02-equipment-hours-validation/docs/FLAG_RULES.md"
+  - "02-equipment-hours-validation/specs/db_schema.sql"
+
+phases:
+  - name: "Phase P3 — Gold Reconciliation, Flags, and Exceptions"
+    tasks:
+      - task_id: "p3-reconciliation"
+        name: "Equipment-Day Reconciliation"
+        description: "Aggregate silver layer data into gold layer equipment-day reconciliation table."
+        acceptance_criteria:
+          - "Gold layer table g_equipment_day_recon is populated with data from all sources."
+          - "Variances between sources are calculated (e.g., timecard vs GPS)."
+          - "Confidence scores are assigned based on data completeness and agreement."
+        implementation_notes: "Join data from silver tables, calculate variances, and assign confidence scores based on predefined rules. Use SQL for aggregation."
+        documentation:
+          - "Document reconciliation logic in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_reconciliation.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/reconciliation/reconcile.py"
+          - "02-equipment-hours-validation/tests/test_reconciliation.py"
+
+      - task_id: "p3-flags-generation"
+        name: "Flags Generation"
+        description: "Generate flags for discrepancies and data quality issues in reconciled data."
+        acceptance_criteria:
+          - "Flags are generated for significant variances and missing data in g_equipment_day_flags table."
+          - "Severity levels are assigned based on impact (e.g., high for large variances)."
+        implementation_notes: "Implement rules from FLAG_RULES.md to identify issues. Store flags with severity and details in database."
+        documentation:
+          - "Document flag generation rules in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_flags.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/reconciliation/flags.py"
+          - "02-equipment-hours-validation/tests/test_flags.py"
+
+      - task_id: "p3-exceptions-generation"
+        name: "Exceptions Generation"
+        description: "Create actionable exceptions based on flags for review and resolution."
+        acceptance_criteria:
+          - "Exceptions are created in g_exceptions table for high-severity flags."
+          - "Exceptions include details, priority, and are assigned to owners if possible."
+        implementation_notes: "Filter high-severity flags to create exceptions. Assign priorities based on severity and business rules."
+        documentation:
+          - "Document exceptions generation in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_exceptions.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/reconciliation/exceptions.py"
+          - "02-equipment-hours-validation/tests/test_exceptions.py"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_reconciliation.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_flags.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_exceptions.py"
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM g_equipment_day_recon LIMIT 5;'"  # Adjust for actual DB
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM g_equipment_day_flags LIMIT 5;'"  # Adjust for actual DB
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM g_exceptions LIMIT 5;'"  # Adjust for actual DB
+
+    done_when: "Gold layer reconciliation is complete, flags and exceptions are generated, and all verification steps pass."
+
+follow_up:
+  - "Proceed to Phase P4 for scheduling, backfill, and health checks implementation."

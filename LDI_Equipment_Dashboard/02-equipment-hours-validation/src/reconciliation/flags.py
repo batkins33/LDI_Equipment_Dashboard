@@ -1,0 +1,12 @@
+"""Flag definitions (spec path).
+
+In this P0.5 POC, flags are emitted by GoldReconciler.
+This module provides shared constants for downstream consumers (API/UI).
+"""
+
+FLAG_HIGH_VARIANCE = "HIGH_VARIANCE"
+FLAG_MISSING_INSPECTION = "MISSING_INSPECTION"
+FLAG_MISSING_TELEMATICS = "MISSING_TELEMATICS"
+FLAG_MISSING_TIMECARD = "MISSING_TIMECARD"
+FLAG_APPROVAL_DELAY = "APPROVAL_DELAY"
+FLAG_MULTI_JOB_ALLOCATION = "MULTI_JOB_ALLOCATION"

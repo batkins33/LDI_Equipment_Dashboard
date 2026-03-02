@@ -1,0 +1,69 @@
+project: Equipment Hours Validation
+phase_number: P5
+phase_name: "Dashboard Views, Runbooks, and UAT"
+description: "Develop SQL views for dashboard, create operational runbooks, and perform UAT with mock fixtures."
+context: "This final phase focuses on presenting reconciled data through dashboard views for operational use. It includes documentation for running the system and user acceptance testing to validate functionality with mock data."
+
+reads:
+  - "02-equipment-hours-validation/docs/DASHBOARD_LAYOUT.md"
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+
+phases:
+  - name: "Phase P5 — Dashboard Views, Runbooks, and UAT"
+    tasks:
+      - task_id: "p5-dashboard-views"
+        name: "SQL Views for Dashboard"
+        description: "Create SQL views for dashboard metrics like yesterday provisional, exceptions, and compliance."
+        acceptance_criteria:
+          - "SQL views are created for all dashboard metrics as per DASHBOARD_LAYOUT.md."
+          - "Views return expected data with mock fixtures."
+        implementation_notes: "Write SQL queries to aggregate data from gold tables for dashboard display. Optimize for performance."
+        documentation:
+          - "Document dashboard views in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_dashboard_views.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/dashboard/views.sql"
+          - "02-equipment-hours-validation/tests/test_dashboard_views.py"
+
+      - task_id: "p5-runbooks"
+        name: "Operational Runbooks"
+        description: "Document operational procedures for running and maintaining the system."
+        acceptance_criteria:
+          - "Runbooks cover installation, running pipelines, troubleshooting, and deployment."
+          - "Documentation is clear and comprehensive."
+        implementation_notes: "Compile all documentation into a single HOW_TO_RUN.md and DEPLOY.md for deployment instructions."
+        documentation:
+          - "Complete HOW_TO_RUN.md with all operational details."
+          - "Create DEPLOY.md with deployment instructions."
+        testing:
+          - "grep -c 'HOW_TO_RUN' 02-equipment-hours-validation/HOW_TO_RUN.md"
+        files_to_create:
+          - "02-equipment-hours-validation/HOW_TO_RUN.md"
+          - "02-equipment-hours-validation/DEPLOY.md"
+
+      - task_id: "p5-uat-mock-fixtures"
+        name: "UAT with Mock Fixtures"
+        description: "Perform user acceptance testing using mock data fixtures to validate system functionality."
+        acceptance_criteria:
+          - "UAT scripts simulate end-to-end workflow with mock data."
+          - "All dashboard views display correct data based on mock fixtures."
+          - "Exceptions and flags are correctly generated and displayed."
+        implementation_notes: "Create mock data fixtures for all sources. Run through full pipeline to validate outputs."
+        documentation:
+          - "Document UAT process and results in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_uat.py"
+        files_to_create:
+          - "02-equipment-hours-validation/tests/uat_fixtures/"
+          - "02-equipment-hours-validation/tests/test_uat.py"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_dashboard_views.py"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_uat.py"
+      - "sqlite3 02-equipment-hours-validation/data/db.sqlite 'SELECT * FROM vw_yesterday_provisional LIMIT 5;'"  # Adjust for actual view name and DB
+
+    done_when: "Dashboard views are implemented, runbooks are complete, UAT validates system functionality with mock data, and all verification steps pass."
+
+follow_up:
+  - "Review system for production readiness and plan for real data integration."

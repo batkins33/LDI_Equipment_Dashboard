@@ -1,0 +1,203 @@
+project: Equipment Hours Validation
+phase_number: P0.5
+phase_name: "Demo/POC with Mocked Data"
+description: "Build a fully functional demo with mocked external data to validate UI, reconciliation logic, and user workflows before connecting to real systems."
+context: "After P0 establishes the repo and database, this phase creates a complete end-to-end proof-of-concept using realistic mock data. This allows stakeholders to see the dashboard, test workflows, and validate the reconciliation logic without depending on external system APIs. Once approved, P1 will replace mock connectors with real ones."
+
+reads:
+  - "02-equipment-hours-validation/docs/EXECUTIVE_SUMMARY.md"
+  - "02-equipment-hours-validation/docs/DASHBOARD_LAYOUT.md"
+  - "02-equipment-hours-validation/docs/CANONICAL_SCHEMA.md"
+  - "02-equipment-hours-validation/specs/db_schema.sql"
+
+phases:
+  - name: "Phase P0.5 — Demo/POC with Mocked Data"
+    tasks:
+      - task_id: "p0.5-mock-data-generator"
+        name: "Mock Data Generator"
+        description: "Create realistic mock datasets for all 4 external systems (HeavyJob, Safety, Equipment360, Telematics) covering 30 days of equipment activity."
+        acceptance_criteria:
+          - "Mock data generator produces consistent, realistic data for 10-15 pieces of equipment across 5 jobs."
+          - "Mock data includes variance scenarios (GPS > timecard, GPS < timecard, missing inspections, approval delays)."
+          - "Generated data can be loaded into database via simple script."
+        implementation_notes: |
+          - Create mock datasets in JSON/CSV format in data/fixtures/
+          - Include realistic variance patterns: equipment working longer than reported, under-reporting, missing inspections
+          - Generate 30-day history with approval delays (some timecards approved same-day, others 3-5 days later)
+          - Include edge cases: equipment with no telematics, missing meter readings, multiple jobs per day
+        documentation:
+          - "Create MOCK_DATA_GUIDE.md explaining variance scenarios and how to regenerate fixtures."
+        testing:
+          - "python 02-equipment-hours-validation/scripts/generate_mock_data.py"
+          - "Verify JSON/CSV files are valid and loadable"
+        files_to_create:
+          - "02-equipment-hours-validation/scripts/generate_mock_data.py"
+          - "02-equipment-hours-validation/data/fixtures/mock_heavyjob.json"
+          - "02-equipment-hours-validation/data/fixtures/mock_safety.json"
+          - "02-equipment-hours-validation/data/fixtures/mock_equipment360.json"
+          - "02-equipment-hours-validation/data/fixtures/mock_telematics.json"
+          - "02-equipment-hours-validation/docs/MOCK_DATA_GUIDE.md"
+
+      - task_id: "p0.5-mock-connectors"
+        name: "Mock Connectors (Bronze Layer)"
+        description: "Create mock connector modules that load fixture data instead of calling real APIs. These will be replaced in P1 with real connectors."
+        acceptance_criteria:
+          - "Mock connectors load fixture data and store in bronze layer (same schema as real connectors)."
+          - "Each mock connector has a 'use_mock' flag in config."
+          - "Mock connectors are drop-in replacements for real connectors (same interface)."
+        implementation_notes: |
+          - Create connectors/mock_heavyjob.py, connectors/mock_safety.py, etc.
+          - Load from fixtures/ instead of calling APIs
+          - Store raw payloads in data/bronze/ (same as real connectors would)
+          - In P1, real connectors will use same interface but call actual APIs
+        documentation:
+          - "Document mock connector usage in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_mock_connectors.py"
+        files_to_create:
+          - "02-equipment-hours-validation/src/connectors/mock_heavyjob.py"
+          - "02-equipment-hours-validation/src/connectors/mock_safety.py"
+          - "02-equipment-hours-validation/src/connectors/mock_equipment360.py"
+          - "02-equipment-hours-validation/src/connectors/mock_telematics.py"
+          - "02-equipment-hours-validation/tests/test_mock_connectors.py"
+
+      - task_id: "p0.5-silver-normalization"
+        name: "Silver Layer Normalization"
+        description: "Implement silver layer logic to normalize mock bronze data into canonical schema with crosswalk mapping."
+        acceptance_criteria:
+          - "Bronze data is normalized into silver facts (f_timecard_equipment_hours, f_telematics_equipment_day, etc.)."
+          - "Equipment/job/employee crosswalks are built and validated."
+          - "Idempotent upserts work correctly (re-running produces same results)."
+        implementation_notes: |
+          - Create normalizers for each source (heavyjob, safety, equipment360, telematics)
+          - Implement crosswalk logic: map external IDs to internal surrogate IDs
+          - Handle missing mappings gracefully (log warnings, skip or flag)
+          - Use upsert logic (INSERT ... ON CONFLICT for Postgres, MERGE for SQL Server)
+        documentation:
+          - "Document silver layer logic in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_silver_normalization.py"
+          - "Verify silver tables are populated correctly"
+        files_to_create:
+          - "02-equipment-hours-validation/src/normalizers/heavyjob_normalizer.py"
+          - "02-equipment-hours-validation/src/normalizers/safety_normalizer.py"
+          - "02-equipment-hours-validation/src/normalizers/equipment360_normalizer.py"
+          - "02-equipment-hours-validation/src/normalizers/telematics_normalizer.py"
+          - "02-equipment-hours-validation/src/normalizers/crosswalk.py"
+          - "02-equipment-hours-validation/tests/test_silver_normalization.py"
+
+      - task_id: "p0.5-gold-recon-flags"
+        name: "Gold Layer Reconciliation & Flags"
+        description: "Implement gold layer logic to reconcile equipment-day facts, compute variances, confidence scores, and generate flags."
+        acceptance_criteria:
+          - "Gold recon table (g_equipment_day_recon) is populated with variances and confidence scores."
+          - "Flags are generated for high-variance, missing data, approval delays, etc."
+          - "Exceptions queue is populated with actionable items."
+        implementation_notes: |
+          - Compute variance_tc_vs_gps = abs(tc_hours - gps_hours) / gps_hours (handle division by zero)
+          - Compute variance_meter_vs_gps similarly
+          - Confidence score: 100 if all sources agree, lower if variances exist
+          - Flag types: HIGH_VARIANCE, MISSING_INSPECTION, MISSING_TELEMATICS, APPROVAL_DELAY, MULTI_JOB_ALLOCATION
+          - Create exceptions for flags above severity threshold
+        documentation:
+          - "Document recon logic and flag rules in HOW_TO_RUN.md."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_gold_recon.py"
+          - "Verify variance calculations and flag generation"
+        files_to_create:
+          - "02-equipment-hours-validation/src/reconciliation/recon_engine.py"
+          - "02-equipment-hours-validation/src/reconciliation/flags.py"
+          - "02-equipment-hours-validation/src/reconciliation/exceptions.py"
+          - "02-equipment-hours-validation/tests/test_gold_recon.py"
+
+      - task_id: "p0.5-dashboard-views"
+        name: "Dashboard SQL Views & API"
+        description: "Create SQL views for all 7 dashboard pages and a simple REST API to serve data."
+        acceptance_criteria:
+          - "SQL views exist for: executive overview, yesterday provisional, exceptions queue, approval flow, inspections compliance, telematics health, equipment drilldown."
+          - "REST API endpoints return JSON for each dashboard page."
+          - "API is documented with example requests/responses."
+        implementation_notes: |
+          - Create views in SQL: v_executive_overview, v_yesterday_provisional, v_exceptions_queue, etc.
+          - Build Flask/FastAPI endpoints: GET /api/dashboard/overview, /api/dashboard/provisional, etc.
+          - Include filtering/sorting: by job, by equipment, by date range
+          - Add simple authentication (API key or session-based)
+        documentation:
+          - "Create API_SPEC.md with endpoint documentation."
+        testing:
+          - "python -m pytest 02-equipment-hours-validation/tests/test_dashboard_api.py"
+          - "curl http://localhost:5000/api/dashboard/overview"
+        files_to_create:
+          - "02-equipment-hours-validation/src/views/dashboard_views.sql"
+          - "02-equipment-hours-validation/src/api/app.py"
+          - "02-equipment-hours-validation/src/api/routes.py"
+          - "02-equipment-hours-validation/tests/test_dashboard_api.py"
+          - "02-equipment-hours-validation/docs/API_SPEC.md"
+
+      - task_id: "p0.5-ui-frontend"
+        name: "Frontend Dashboard UI"
+        description: "Build a simple web UI (React/Vue or HTML+JS) to display all 7 dashboard pages using the API."
+        acceptance_criteria:
+          - "All 7 dashboard pages are rendered with mock data."
+          - "UI is responsive and shows KPIs, tables, charts, and drill-down capabilities."
+          - "Users can filter by job, equipment, date range."
+          - "UI is deployable locally (npm start or python -m http.server)."
+        implementation_notes: |
+          - Use React + TailwindCSS + shadcn/ui for modern, clean UI
+          - Or use simple HTML/JS if lighter weight preferred
+          - Implement all 7 pages: overview, provisional, exceptions, approval flow, inspections, telematics, drilldown
+          - Add charts (variance distribution, approval lag, compliance trends)
+          - Make it look polished for stakeholder demo
+        documentation:
+          - "Create UI_SETUP.md with build and run instructions."
+        testing:
+          - "npm start (or equivalent) and verify all pages load"
+          - "Manual smoke test: click through all pages, verify data displays"
+        files_to_create:
+          - "02-equipment-hours-validation/ui/package.json"
+          - "02-equipment-hours-validation/ui/src/App.jsx"
+          - "02-equipment-hours-validation/ui/src/pages/*.jsx"
+          - "02-equipment-hours-validation/ui/src/components/*.jsx"
+          - "02-equipment-hours-validation/docs/UI_SETUP.md"
+
+      - task_id: "p0.5-end-to-end-demo"
+        name: "End-to-End Demo Script"
+        description: "Create a single script that sets up the entire demo: load mock data, run ETL, populate dashboard, and launch UI."
+        acceptance_criteria:
+          - "Running 'python demo.py' or 'bash demo.sh' sets up everything in < 2 minutes."
+          - "Script is idempotent (safe to run multiple times)."
+          - "Script outputs clear instructions for accessing the dashboard."
+        implementation_notes: |
+          - Script should: generate mock data, load into DB, run normalizers, run recon, start API, start UI
+          - Include reset option: --reset to clear DB and start fresh
+          - Output: "Dashboard available at http://localhost:3000"
+          - Document any prerequisites (Python version, Node version, DB setup)
+        documentation:
+          - "Create DEMO_QUICKSTART.md with step-by-step instructions."
+        testing:
+          - "python 02-equipment-hours-validation/scripts/demo.py"
+          - "Verify dashboard loads and shows mock data"
+        files_to_create:
+          - "02-equipment-hours-validation/scripts/demo.py"
+          - "02-equipment-hours-validation/docs/DEMO_QUICKSTART.md"
+
+    verify:
+      - "python -m pytest 02-equipment-hours-validation/tests/test_mock_connectors.py -v"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_silver_normalization.py -v"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_gold_recon.py -v"
+      - "python -m pytest 02-equipment-hours-validation/tests/test_dashboard_api.py -v"
+      - "python 02-equipment-hours-validation/scripts/demo.py"
+      - "curl -s http://localhost:5000/api/dashboard/overview | jq . | head -20"
+      - "Manually verify all 7 dashboard pages load in browser"
+
+    done_when: |
+      - All tests pass
+      - Demo script runs end-to-end without errors
+      - All 7 dashboard pages display mock data correctly
+      - UI is visually polished and ready for stakeholder demo
+      - Documentation is complete (DEMO_QUICKSTART.md, MOCK_DATA_GUIDE.md, API_SPEC.md, UI_SETUP.md)
+
+follow_up:
+  - "Schedule stakeholder demo to validate UI, workflows, and reconciliation logic."
+  - "Gather feedback on dashboard layout, KPIs, and exception handling."
+  - "Once approved, proceed to Phase P1 to replace mock connectors with real API integrations."

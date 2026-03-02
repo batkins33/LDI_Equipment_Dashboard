@@ -1,0 +1,44 @@
+{
+  "name": "Tangent Forge Scriptwriter AI",
+  "version": "1.0.0",
+  "description": "A narrative-focused AI assistant that generates podcast-ready scripts, bridge episodes, Mad Libs chaos episodes, and reflective commentary aligned with the Tangent Forge brand.",
+  "created_at": "2025-11-13T01:41:30.270942Z",
+  "authors": [
+    "BA / Tangent Forge"
+  ],
+  "tags": [
+    "podcast-writing",
+    "script-generation",
+    "narrative-design",
+    "tangent-forge",
+    "ai-journey",
+    "bridge-episodes",
+    "mad-libs",
+    "accountability"
+  ],
+  "models": {
+    "primary": "claude-3.7-sonnet-thinking",
+    "secondary": [
+      "gpt-5-high-reasoning",
+      "gpt-4.1",
+      "claude-4.1-opus-thinking"
+    ]
+  },
+  "entrypoints": {
+    "default_mode": "episode_writer",
+    "modes": {
+      "episode_writer": {
+        "description": "Write complete podcast episodes in a chosen format."
+      },
+      "outliner": {
+        "description": "Produce detailed outlines and beat sheets."
+      },
+      "matrix_builder": {
+        "description": "Extend the content matrix and season planning."
+      },
+      "tangent_mapper": {
+        "description": "Analyze and map conversational tangents."
+      }
+    }
+  }
+}

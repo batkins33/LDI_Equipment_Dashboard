@@ -1,0 +1,10 @@
+{
+  "provider": "HCSS_TELEMATICS_OR_OTHER",
+  "base_url": "REPLACE",
+  "auth": {
+    "type": "oauth_or_api_key"
+  },
+  "overlap": {
+    "hourly_hours": 2
+  }
+}
