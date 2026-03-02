@@ -1,0 +1,2446 @@
+{
+  "equipment": [
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010"
+    }
+  ],
+  "readings": [
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-01-30",
+      "engine_hours": 13685.26,
+      "daily_hours": 6.79,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-01-31",
+      "engine_hours": 13689.57,
+      "daily_hours": 4.31,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-01",
+      "engine_hours": 13696.74,
+      "daily_hours": 7.17,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-02",
+      "engine_hours": 13702.52,
+      "daily_hours": 5.78,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-03",
+      "engine_hours": 13710.46,
+      "daily_hours": 7.94,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-04",
+      "engine_hours": 13713.47,
+      "daily_hours": 3.01,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-05",
+      "engine_hours": 13717.22,
+      "daily_hours": 3.75,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-06",
+      "engine_hours": 13725.24,
+      "daily_hours": 8.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-07",
+      "engine_hours": 13732.97,
+      "daily_hours": 7.73,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-08",
+      "engine_hours": 13740.7,
+      "daily_hours": 7.73,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-09",
+      "engine_hours": 13745.42,
+      "daily_hours": 4.72,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-10",
+      "engine_hours": 13748.56,
+      "daily_hours": 3.14,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-11",
+      "engine_hours": 13755.37,
+      "daily_hours": 6.81,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-12",
+      "engine_hours": 13761.97,
+      "daily_hours": 6.6,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-13",
+      "engine_hours": 13766.11,
+      "daily_hours": 4.14,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-14",
+      "engine_hours": 13774.41,
+      "daily_hours": 8.3,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-15",
+      "engine_hours": 13781.89,
+      "daily_hours": 7.48,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-16",
+      "engine_hours": 13788.29,
+      "daily_hours": 6.4,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-17",
+      "engine_hours": 13793.02,
+      "daily_hours": 4.73,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-18",
+      "engine_hours": 13800.65,
+      "daily_hours": 7.63,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-19",
+      "engine_hours": 13803.88,
+      "daily_hours": 3.23,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-20",
+      "engine_hours": 13811.35,
+      "daily_hours": 7.47,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-21",
+      "engine_hours": 13817.24,
+      "daily_hours": 5.89,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-22",
+      "engine_hours": 13824.78,
+      "daily_hours": 7.54,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-23",
+      "engine_hours": 13828.11,
+      "daily_hours": 3.33,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-24",
+      "engine_hours": 13834.18,
+      "daily_hours": 6.07,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-25",
+      "engine_hours": 13838.4,
+      "daily_hours": 4.22,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-26",
+      "engine_hours": 13841.43,
+      "daily_hours": 3.03,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-27",
+      "engine_hours": 13849.21,
+      "daily_hours": 7.78,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-001",
+      "device_id": "DEVICE-001",
+      "date": "2026-02-28",
+      "engine_hours": 13856.03,
+      "daily_hours": 6.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-01-30",
+      "engine_hours": 5404.69,
+      "daily_hours": 8.45,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-01-31",
+      "engine_hours": 5412.15,
+      "daily_hours": 7.46,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-01",
+      "engine_hours": 5420.49,
+      "daily_hours": 8.34,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-02",
+      "engine_hours": 5426.51,
+      "daily_hours": 6.02,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-03",
+      "engine_hours": 5430.64,
+      "daily_hours": 4.13,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-04",
+      "engine_hours": 5435.76,
+      "daily_hours": 5.12,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-05",
+      "engine_hours": 5441.42,
+      "daily_hours": 5.66,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-06",
+      "engine_hours": 5445.55,
+      "daily_hours": 4.13,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-07",
+      "engine_hours": 5452.06,
+      "daily_hours": 6.51,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-08",
+      "engine_hours": 5455.49,
+      "daily_hours": 3.43,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-09",
+      "engine_hours": 5459.67,
+      "daily_hours": 4.18,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-10",
+      "engine_hours": 5463.96,
+      "daily_hours": 4.29,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-11",
+      "engine_hours": 5468.19,
+      "daily_hours": 4.23,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-12",
+      "engine_hours": 5474.95,
+      "daily_hours": 6.76,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-13",
+      "engine_hours": 5482.88,
+      "daily_hours": 7.93,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-14",
+      "engine_hours": 5488.22,
+      "daily_hours": 5.34,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-15",
+      "engine_hours": 5492.64,
+      "daily_hours": 4.42,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-16",
+      "engine_hours": 5497.97,
+      "daily_hours": 5.33,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-17",
+      "engine_hours": 5502.49,
+      "daily_hours": 4.52,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-18",
+      "engine_hours": 5509.25,
+      "daily_hours": 6.76,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-19",
+      "engine_hours": 5517.66,
+      "daily_hours": 8.41,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-20",
+      "engine_hours": 5524.1,
+      "daily_hours": 6.44,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-21",
+      "engine_hours": 5533.04,
+      "daily_hours": 8.94,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-22",
+      "engine_hours": 5536.48,
+      "daily_hours": 3.44,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-23",
+      "engine_hours": 5544.38,
+      "daily_hours": 7.9,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-24",
+      "engine_hours": 5550.38,
+      "daily_hours": 6.0,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-25",
+      "engine_hours": 5558.83,
+      "daily_hours": 8.45,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-26",
+      "engine_hours": 5565.32,
+      "daily_hours": 6.49,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-27",
+      "engine_hours": 5573.27,
+      "daily_hours": 7.95,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-002",
+      "device_id": "DEVICE-002",
+      "date": "2026-02-28",
+      "engine_hours": 5579.84,
+      "daily_hours": 6.57,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-01-30",
+      "engine_hours": 13041.94,
+      "daily_hours": 7.84,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-01-31",
+      "engine_hours": 13050.68,
+      "daily_hours": 8.74,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-01",
+      "engine_hours": 13056.14,
+      "daily_hours": 5.46,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-02",
+      "engine_hours": 13063.88,
+      "daily_hours": 7.74,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-03",
+      "engine_hours": 13068.82,
+      "daily_hours": 4.94,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-04",
+      "engine_hours": 13073.64,
+      "daily_hours": 4.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-05",
+      "engine_hours": 13081.46,
+      "daily_hours": 7.82,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-06",
+      "engine_hours": 13087.41,
+      "daily_hours": 5.95,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-07",
+      "engine_hours": 13091.46,
+      "daily_hours": 4.05,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-08",
+      "engine_hours": 13100.29,
+      "daily_hours": 8.83,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-09",
+      "engine_hours": 13107.87,
+      "daily_hours": 7.58,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-10",
+      "engine_hours": 13112.57,
+      "daily_hours": 4.7,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-11",
+      "engine_hours": 13118.18,
+      "daily_hours": 5.61,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-12",
+      "engine_hours": 13121.59,
+      "daily_hours": 3.41,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-13",
+      "engine_hours": 13130.25,
+      "daily_hours": 8.66,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-14",
+      "engine_hours": 13133.97,
+      "daily_hours": 3.72,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-15",
+      "engine_hours": 13141.56,
+      "daily_hours": 7.59,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-16",
+      "engine_hours": 13147.07,
+      "daily_hours": 5.51,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-17",
+      "engine_hours": 13152.38,
+      "daily_hours": 5.31,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-18",
+      "engine_hours": 13157.06,
+      "daily_hours": 4.68,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-19",
+      "engine_hours": 13163.93,
+      "daily_hours": 6.87,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-20",
+      "engine_hours": 13171.38,
+      "daily_hours": 7.45,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-21",
+      "engine_hours": 13177.4,
+      "daily_hours": 6.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-22",
+      "engine_hours": 13186.08,
+      "daily_hours": 8.68,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-23",
+      "engine_hours": 13194.37,
+      "daily_hours": 8.29,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-24",
+      "engine_hours": 13197.43,
+      "daily_hours": 3.06,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-25",
+      "engine_hours": 13202.55,
+      "daily_hours": 5.12,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-26",
+      "engine_hours": 13205.83,
+      "daily_hours": 3.28,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-27",
+      "engine_hours": 13210.92,
+      "daily_hours": 5.09,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-003",
+      "device_id": "DEVICE-003",
+      "date": "2026-02-28",
+      "engine_hours": 13217.33,
+      "daily_hours": 6.41,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-01-30",
+      "engine_hours": 8229.34,
+      "daily_hours": 8.32,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-01-31",
+      "engine_hours": 8236.92,
+      "daily_hours": 7.58,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-01",
+      "engine_hours": 8242.06,
+      "daily_hours": 5.14,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-02",
+      "engine_hours": 8245.32,
+      "daily_hours": 3.26,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-03",
+      "engine_hours": 8248.34,
+      "daily_hours": 3.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-04",
+      "engine_hours": 8256.46,
+      "daily_hours": 8.12,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-05",
+      "engine_hours": 8263.02,
+      "daily_hours": 6.56,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-06",
+      "engine_hours": 8271.57,
+      "daily_hours": 8.55,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-07",
+      "engine_hours": 8279.38,
+      "daily_hours": 7.81,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-08",
+      "engine_hours": 8285.39,
+      "daily_hours": 6.01,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-09",
+      "engine_hours": 8291.47,
+      "daily_hours": 6.08,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-10",
+      "engine_hours": 8299.22,
+      "daily_hours": 7.75,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-11",
+      "engine_hours": 8305.24,
+      "daily_hours": 6.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-12",
+      "engine_hours": 8313.08,
+      "daily_hours": 7.84,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-13",
+      "engine_hours": 8318.96,
+      "daily_hours": 5.88,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-14",
+      "engine_hours": 8325.95,
+      "daily_hours": 6.99,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-15",
+      "engine_hours": 8332.38,
+      "daily_hours": 6.43,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-16",
+      "engine_hours": 8336.54,
+      "daily_hours": 4.16,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-17",
+      "engine_hours": 8339.79,
+      "daily_hours": 3.25,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-18",
+      "engine_hours": 8347.84,
+      "daily_hours": 8.05,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-19",
+      "engine_hours": 8352.57,
+      "daily_hours": 4.73,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-20",
+      "engine_hours": 8360.04,
+      "daily_hours": 7.47,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-21",
+      "engine_hours": 8368.63,
+      "daily_hours": 8.59,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-22",
+      "engine_hours": 8372.39,
+      "daily_hours": 3.76,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-23",
+      "engine_hours": 8378.04,
+      "daily_hours": 5.65,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-24",
+      "engine_hours": 8386.85,
+      "daily_hours": 8.81,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-25",
+      "engine_hours": 8393.16,
+      "daily_hours": 6.31,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-26",
+      "engine_hours": 8400.07,
+      "daily_hours": 6.91,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-27",
+      "engine_hours": 8407.84,
+      "daily_hours": 7.77,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-004",
+      "device_id": "DEVICE-004",
+      "date": "2026-02-28",
+      "engine_hours": 8413.89,
+      "daily_hours": 6.05,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-01-30",
+      "engine_hours": 12851.8,
+      "daily_hours": 5.71,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-01-31",
+      "engine_hours": 12856.85,
+      "daily_hours": 5.05,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-01",
+      "engine_hours": 12862.42,
+      "daily_hours": 5.57,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-02",
+      "engine_hours": 12868.46,
+      "daily_hours": 6.04,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-03",
+      "engine_hours": 12877.3,
+      "daily_hours": 8.84,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-04",
+      "engine_hours": 12881.06,
+      "daily_hours": 3.76,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-05",
+      "engine_hours": 12889.74,
+      "daily_hours": 8.68,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-06",
+      "engine_hours": 12896.01,
+      "daily_hours": 6.27,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-07",
+      "engine_hours": 12903.66,
+      "daily_hours": 7.65,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-08",
+      "engine_hours": 12911.48,
+      "daily_hours": 7.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-09",
+      "engine_hours": 12915.11,
+      "daily_hours": 3.63,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-10",
+      "engine_hours": 12920.91,
+      "daily_hours": 5.8,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-11",
+      "engine_hours": 12927.04,
+      "daily_hours": 6.13,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-12",
+      "engine_hours": 12932.92,
+      "daily_hours": 5.88,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-13",
+      "engine_hours": 12937.48,
+      "daily_hours": 4.56,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-14",
+      "engine_hours": 12946.06,
+      "daily_hours": 8.58,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-15",
+      "engine_hours": 12953.05,
+      "daily_hours": 6.99,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-16",
+      "engine_hours": 12956.54,
+      "daily_hours": 3.49,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-17",
+      "engine_hours": 12961.25,
+      "daily_hours": 4.71,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-18",
+      "engine_hours": 12964.47,
+      "daily_hours": 3.22,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-19",
+      "engine_hours": 12971.57,
+      "daily_hours": 7.1,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-20",
+      "engine_hours": 12976.59,
+      "daily_hours": 5.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-21",
+      "engine_hours": 12983.14,
+      "daily_hours": 6.55,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-22",
+      "engine_hours": 12989.79,
+      "daily_hours": 6.65,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-23",
+      "engine_hours": 12993.32,
+      "daily_hours": 3.53,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-24",
+      "engine_hours": 13000.9,
+      "daily_hours": 7.58,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-25",
+      "engine_hours": 13005.94,
+      "daily_hours": 5.04,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-26",
+      "engine_hours": 13013.87,
+      "daily_hours": 7.93,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-27",
+      "engine_hours": 13017.63,
+      "daily_hours": 3.76,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-005",
+      "device_id": "DEVICE-005",
+      "date": "2026-02-28",
+      "engine_hours": 13021.89,
+      "daily_hours": 4.26,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-01-30",
+      "engine_hours": 8309.86,
+      "daily_hours": 8.49,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-01-31",
+      "engine_hours": 8318.45,
+      "daily_hours": 8.59,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-01",
+      "engine_hours": 8323.31,
+      "daily_hours": 4.86,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-02",
+      "engine_hours": 8327.17,
+      "daily_hours": 3.86,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-03",
+      "engine_hours": 8330.38,
+      "daily_hours": 3.21,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-04",
+      "engine_hours": 8334.39,
+      "daily_hours": 4.01,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-05",
+      "engine_hours": 8337.87,
+      "daily_hours": 3.48,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-06",
+      "engine_hours": 8341.3,
+      "daily_hours": 3.43,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-07",
+      "engine_hours": 8347.13,
+      "daily_hours": 5.83,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-08",
+      "engine_hours": 8350.83,
+      "daily_hours": 3.7,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-09",
+      "engine_hours": 8357.65,
+      "daily_hours": 6.82,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-10",
+      "engine_hours": 8362.2,
+      "daily_hours": 4.55,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-11",
+      "engine_hours": 8368.22,
+      "daily_hours": 6.02,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-12",
+      "engine_hours": 8372.96,
+      "daily_hours": 4.74,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-13",
+      "engine_hours": 8381.77,
+      "daily_hours": 8.81,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-14",
+      "engine_hours": 8390.09,
+      "daily_hours": 8.32,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-15",
+      "engine_hours": 8393.82,
+      "daily_hours": 3.73,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-16",
+      "engine_hours": 8398.19,
+      "daily_hours": 4.37,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-17",
+      "engine_hours": 8403.41,
+      "daily_hours": 5.22,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-18",
+      "engine_hours": 8407.66,
+      "daily_hours": 4.25,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-19",
+      "engine_hours": 8415.01,
+      "daily_hours": 7.35,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-20",
+      "engine_hours": 8422.56,
+      "daily_hours": 7.55,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-21",
+      "engine_hours": 8430.34,
+      "daily_hours": 7.78,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-22",
+      "engine_hours": 8437.14,
+      "daily_hours": 6.8,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-23",
+      "engine_hours": 8441.69,
+      "daily_hours": 4.55,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-24",
+      "engine_hours": 8450.57,
+      "daily_hours": 8.88,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-25",
+      "engine_hours": 8456.59,
+      "daily_hours": 6.02,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-26",
+      "engine_hours": 8463.24,
+      "daily_hours": 6.65,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-27",
+      "engine_hours": 8471.81,
+      "daily_hours": 8.57,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-006",
+      "device_id": "DEVICE-006",
+      "date": "2026-02-28",
+      "engine_hours": 8476.86,
+      "daily_hours": 5.05,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-01-30",
+      "engine_hours": 9590.79,
+      "daily_hours": 5.46,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-01-31",
+      "engine_hours": 9595.13,
+      "daily_hours": 4.34,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-01",
+      "engine_hours": 9603.82,
+      "daily_hours": 8.69,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-02",
+      "engine_hours": 9606.96,
+      "daily_hours": 3.14,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-03",
+      "engine_hours": 9613.83,
+      "daily_hours": 6.87,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-04",
+      "engine_hours": 9619.75,
+      "daily_hours": 5.92,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-05",
+      "engine_hours": 9624.04,
+      "daily_hours": 4.29,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-06",
+      "engine_hours": 9629.25,
+      "daily_hours": 5.21,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-07",
+      "engine_hours": 9632.52,
+      "daily_hours": 3.27,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-08",
+      "engine_hours": 9637.45,
+      "daily_hours": 4.93,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-09",
+      "engine_hours": 9645.12,
+      "daily_hours": 7.67,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-10",
+      "engine_hours": 9651.17,
+      "daily_hours": 6.05,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-11",
+      "engine_hours": 9659.88,
+      "daily_hours": 8.71,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-12",
+      "engine_hours": 9667.66,
+      "daily_hours": 7.78,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-13",
+      "engine_hours": 9670.82,
+      "daily_hours": 3.16,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-14",
+      "engine_hours": 9674.1,
+      "daily_hours": 3.28,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-15",
+      "engine_hours": 9677.97,
+      "daily_hours": 3.87,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-16",
+      "engine_hours": 9685.26,
+      "daily_hours": 7.29,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-17",
+      "engine_hours": 9693.99,
+      "daily_hours": 8.73,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-18",
+      "engine_hours": 9699.29,
+      "daily_hours": 5.3,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-19",
+      "engine_hours": 9706.36,
+      "daily_hours": 7.07,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-20",
+      "engine_hours": 9709.69,
+      "daily_hours": 3.33,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-21",
+      "engine_hours": 9716.45,
+      "daily_hours": 6.76,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-22",
+      "engine_hours": 9724.61,
+      "daily_hours": 8.16,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-23",
+      "engine_hours": 9730.87,
+      "daily_hours": 6.26,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-24",
+      "engine_hours": 9736.07,
+      "daily_hours": 5.2,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-25",
+      "engine_hours": 9741.12,
+      "daily_hours": 5.05,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-26",
+      "engine_hours": 9746.28,
+      "daily_hours": 5.16,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-27",
+      "engine_hours": 9753.35,
+      "daily_hours": 7.07,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-007",
+      "device_id": "DEVICE-007",
+      "date": "2026-02-28",
+      "engine_hours": 9756.6,
+      "daily_hours": 3.25,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-01-30",
+      "engine_hours": 6667.56,
+      "daily_hours": 6.99,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-01-31",
+      "engine_hours": 6674.49,
+      "daily_hours": 6.93,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-01",
+      "engine_hours": 6679.31,
+      "daily_hours": 4.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-02",
+      "engine_hours": 6687.93,
+      "daily_hours": 8.62,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-03",
+      "engine_hours": 6691.56,
+      "daily_hours": 3.63,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-04",
+      "engine_hours": 6700.02,
+      "daily_hours": 8.46,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-05",
+      "engine_hours": 6708.45,
+      "daily_hours": 8.43,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-06",
+      "engine_hours": 6713.9,
+      "daily_hours": 5.45,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-07",
+      "engine_hours": 6718.53,
+      "daily_hours": 4.63,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-08",
+      "engine_hours": 6727.32,
+      "daily_hours": 8.79,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-09",
+      "engine_hours": 6735.13,
+      "daily_hours": 7.81,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-10",
+      "engine_hours": 6740.35,
+      "daily_hours": 5.22,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-11",
+      "engine_hours": 6745.05,
+      "daily_hours": 4.7,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-12",
+      "engine_hours": 6753.87,
+      "daily_hours": 8.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-13",
+      "engine_hours": 6761.93,
+      "daily_hours": 8.06,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-14",
+      "engine_hours": 6770.58,
+      "daily_hours": 8.65,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-15",
+      "engine_hours": 6777.78,
+      "daily_hours": 7.2,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-16",
+      "engine_hours": 6786.65,
+      "daily_hours": 8.87,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-17",
+      "engine_hours": 6795.38,
+      "daily_hours": 8.73,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-18",
+      "engine_hours": 6800.33,
+      "daily_hours": 4.95,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-19",
+      "engine_hours": 6803.75,
+      "daily_hours": 3.42,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-20",
+      "engine_hours": 6807.0,
+      "daily_hours": 3.25,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-21",
+      "engine_hours": 6813.7,
+      "daily_hours": 6.7,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-22",
+      "engine_hours": 6818.67,
+      "daily_hours": 4.97,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-23",
+      "engine_hours": 6825.93,
+      "daily_hours": 7.26,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-24",
+      "engine_hours": 6831.32,
+      "daily_hours": 5.39,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-25",
+      "engine_hours": 6835.17,
+      "daily_hours": 3.85,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-26",
+      "engine_hours": 6842.53,
+      "daily_hours": 7.36,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-27",
+      "engine_hours": 6848.51,
+      "daily_hours": 5.98,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-008",
+      "device_id": "DEVICE-008",
+      "date": "2026-02-28",
+      "engine_hours": 6853.57,
+      "daily_hours": 5.06,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-01-30",
+      "engine_hours": 8135.82,
+      "daily_hours": 3.24,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-01-31",
+      "engine_hours": 8143.01,
+      "daily_hours": 7.19,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-01",
+      "engine_hours": 8150.57,
+      "daily_hours": 7.56,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-02",
+      "engine_hours": 8153.68,
+      "daily_hours": 3.11,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-03",
+      "engine_hours": 8158.64,
+      "daily_hours": 4.96,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-04",
+      "engine_hours": 8166.51,
+      "daily_hours": 7.87,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-05",
+      "engine_hours": 8169.55,
+      "daily_hours": 3.04,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-06",
+      "engine_hours": 8172.67,
+      "daily_hours": 3.12,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-07",
+      "engine_hours": 8177.61,
+      "daily_hours": 4.94,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-08",
+      "engine_hours": 8182.64,
+      "daily_hours": 5.03,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-09",
+      "engine_hours": 8191.46,
+      "daily_hours": 8.82,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-10",
+      "engine_hours": 8198.98,
+      "daily_hours": 7.52,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-11",
+      "engine_hours": 8204.92,
+      "daily_hours": 5.94,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-12",
+      "engine_hours": 8210.54,
+      "daily_hours": 5.62,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-13",
+      "engine_hours": 8215.12,
+      "daily_hours": 4.58,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-14",
+      "engine_hours": 8222.89,
+      "daily_hours": 7.77,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-15",
+      "engine_hours": 8226.33,
+      "daily_hours": 3.44,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-16",
+      "engine_hours": 8231.1,
+      "daily_hours": 4.77,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-17",
+      "engine_hours": 8234.55,
+      "daily_hours": 3.45,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-18",
+      "engine_hours": 8241.1,
+      "daily_hours": 6.55,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-19",
+      "engine_hours": 8245.24,
+      "daily_hours": 4.14,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-20",
+      "engine_hours": 8252.03,
+      "daily_hours": 6.79,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-21",
+      "engine_hours": 8259.75,
+      "daily_hours": 7.72,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-22",
+      "engine_hours": 8262.95,
+      "daily_hours": 3.2,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-23",
+      "engine_hours": 8266.34,
+      "daily_hours": 3.39,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-24",
+      "engine_hours": 8272.47,
+      "daily_hours": 6.13,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-25",
+      "engine_hours": 8278.0,
+      "daily_hours": 5.53,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-26",
+      "engine_hours": 8284.43,
+      "daily_hours": 6.43,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-27",
+      "engine_hours": 8289.26,
+      "daily_hours": 4.83,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-009",
+      "device_id": "DEVICE-009",
+      "date": "2026-02-28",
+      "engine_hours": 8295.11,
+      "daily_hours": 5.85,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-01-30",
+      "engine_hours": 14677.62,
+      "daily_hours": 4.74,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-01-31",
+      "engine_hours": 14685.8,
+      "daily_hours": 8.18,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-01",
+      "engine_hours": 14688.94,
+      "daily_hours": 3.14,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-02",
+      "engine_hours": 14697.07,
+      "daily_hours": 8.13,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-03",
+      "engine_hours": 14701.79,
+      "daily_hours": 4.72,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-04",
+      "engine_hours": 14707.16,
+      "daily_hours": 5.37,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-05",
+      "engine_hours": 14712.23,
+      "daily_hours": 5.07,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-06",
+      "engine_hours": 14718.42,
+      "daily_hours": 6.19,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-07",
+      "engine_hours": 14723.35,
+      "daily_hours": 4.93,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-08",
+      "engine_hours": 14731.55,
+      "daily_hours": 8.2,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-09",
+      "engine_hours": 14737.89,
+      "daily_hours": 6.34,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-10",
+      "engine_hours": 14745.25,
+      "daily_hours": 7.36,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-11",
+      "engine_hours": 14749.89,
+      "daily_hours": 4.64,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-12",
+      "engine_hours": 14758.77,
+      "daily_hours": 8.88,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-13",
+      "engine_hours": 14767.53,
+      "daily_hours": 8.76,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-14",
+      "engine_hours": 14776.1,
+      "daily_hours": 8.57,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-15",
+      "engine_hours": 14784.37,
+      "daily_hours": 8.27,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-16",
+      "engine_hours": 14791.57,
+      "daily_hours": 7.2,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-17",
+      "engine_hours": 14799.85,
+      "daily_hours": 8.28,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-18",
+      "engine_hours": 14805.0,
+      "daily_hours": 5.15,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-19",
+      "engine_hours": 14809.82,
+      "daily_hours": 4.82,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-20",
+      "engine_hours": 14815.9,
+      "daily_hours": 6.08,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-21",
+      "engine_hours": 14821.01,
+      "daily_hours": 5.11,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-22",
+      "engine_hours": 14825.15,
+      "daily_hours": 4.14,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-23",
+      "engine_hours": 14833.12,
+      "daily_hours": 7.97,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-24",
+      "engine_hours": 14838.13,
+      "daily_hours": 5.01,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-25",
+      "engine_hours": 14845.54,
+      "daily_hours": 7.41,
+      "gps_active": false
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-26",
+      "engine_hours": 14849.14,
+      "daily_hours": 3.6,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-27",
+      "engine_hours": 14857.97,
+      "daily_hours": 8.83,
+      "gps_active": true
+    },
+    {
+      "equipment_id": "EQ-010",
+      "device_id": "DEVICE-010",
+      "date": "2026-02-28",
+      "engine_hours": 14861.41,
+      "daily_hours": 3.44,
+      "gps_active": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+# Equipment Hours Validation Configuration
+
+# Database settings
+database_path: "data/db.sqlite"
+# database_url: "postgresql://user:pass@localhost/equipment_hours"
+
+# Logging
+log_level: "INFO"
+debug: false
+
+# Data sources
+sources:
+  telematics:
+    enabled: true
+    batch_size: 1000
+  timecards:
+    enabled: true
+    provisional_hours_cutoff: "06:00"  # 6am for provisional data
+  inspections:
+    enabled: true
+    photo_validation: true
+  equipment360:
+    enabled: true
+
+# Validation rules
+validation:
+  max_variance_tc_vs_gps: 2.0  # hours
+  max_variance_meter_vs_gps: 1.5  # hours
+  min_confidence_score: 70  # percentage
+
+# Exceptions
+exceptions:
+  auto_create: true
+  default_priority: "MED"
+  auto_assign_to_foreman: true

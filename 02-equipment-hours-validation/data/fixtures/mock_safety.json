@@ -1,0 +1,2546 @@
+{
+  "equipment": [
+    "EQ-001",
+    "EQ-002",
+    "EQ-003",
+    "EQ-004",
+    "EQ-005",
+    "EQ-006",
+    "EQ-007",
+    "EQ-008",
+    "EQ-009",
+    "EQ-010"
+  ],
+  "inspections": [
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-01-30",
+      "hour_meter_start": 2822.0,
+      "hour_meter_end": 2829.4,
+      "meter_delta": 7.4,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-01-31",
+      "hour_meter_start": 2043.3,
+      "hour_meter_end": 2049.7,
+      "meter_delta": 6.4,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-01",
+      "hour_meter_start": 2570.5,
+      "hour_meter_end": 2572.6,
+      "meter_delta": 2.1,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-02",
+      "hour_meter_start": 2865.8,
+      "hour_meter_end": 2868.5,
+      "meter_delta": 2.7,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-03",
+      "hour_meter_start": 1988.4,
+      "hour_meter_end": 1995.1,
+      "meter_delta": 6.7,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-04",
+      "hour_meter_start": 3649.4,
+      "hour_meter_end": 3655.6,
+      "meter_delta": 6.2,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-05",
+      "hour_meter_start": 1534.3,
+      "hour_meter_end": 1538.8,
+      "meter_delta": 4.5,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-06",
+      "hour_meter_start": 4770.0,
+      "hour_meter_end": 4773.7,
+      "meter_delta": 3.7,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-07",
+      "hour_meter_start": 1371.0,
+      "hour_meter_end": 1375.4,
+      "meter_delta": 4.4,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-08",
+      "hour_meter_start": 2785.1,
+      "hour_meter_end": 2789.2,
+      "meter_delta": 4.1,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-09",
+      "hour_meter_start": 3774.0,
+      "hour_meter_end": 3782.0,
+      "meter_delta": 8.0,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-10",
+      "hour_meter_start": 2157.9,
+      "hour_meter_end": 2163.5,
+      "meter_delta": 5.6,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-11",
+      "hour_meter_start": 1935.8,
+      "hour_meter_end": 1939.9,
+      "meter_delta": 4.1,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-12",
+      "hour_meter_start": 1673.5,
+      "hour_meter_end": 1679.8,
+      "meter_delta": 6.3,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-13",
+      "hour_meter_start": 1393.2,
+      "hour_meter_end": 1400.8,
+      "meter_delta": 7.6,
+      "photo_count": 6,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-16",
+      "hour_meter_start": 2864.2,
+      "hour_meter_end": 2870.9,
+      "meter_delta": 6.7,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-18",
+      "hour_meter_start": 4498.1,
+      "hour_meter_end": 4504.5,
+      "meter_delta": 6.4,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-19",
+      "hour_meter_start": 4589.0,
+      "hour_meter_end": 4594.6,
+      "meter_delta": 5.6,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-20",
+      "hour_meter_start": 1584.0,
+      "hour_meter_end": 1590.2,
+      "meter_delta": 6.2,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-21",
+      "hour_meter_start": 4235.8,
+      "hour_meter_end": 4241.1,
+      "meter_delta": 5.3,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-22",
+      "hour_meter_start": 3191.2,
+      "hour_meter_end": 3194.9,
+      "meter_delta": 3.7,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-23",
+      "hour_meter_start": 3719.6,
+      "hour_meter_end": 3722.3,
+      "meter_delta": 2.7,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-24",
+      "hour_meter_start": 4784.8,
+      "hour_meter_end": 4792.7,
+      "meter_delta": 7.9,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-25",
+      "hour_meter_start": 2711.2,
+      "hour_meter_end": 2713.9,
+      "meter_delta": 2.7,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-001",
+      "date": "2026-02-27",
+      "hour_meter_start": 1996.7,
+      "hour_meter_end": 2004.7,
+      "meter_delta": 8.0,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-01-30",
+      "hour_meter_start": 4685.5,
+      "hour_meter_end": 4692.1,
+      "meter_delta": 6.6,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-01-31",
+      "hour_meter_start": 1749.2,
+      "hour_meter_end": 1753.5,
+      "meter_delta": 4.3,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-01",
+      "hour_meter_start": 4127.4,
+      "hour_meter_end": 4134.8,
+      "meter_delta": 7.4,
+      "photo_count": 6,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-03",
+      "hour_meter_start": 3102.4,
+      "hour_meter_end": 3107.9,
+      "meter_delta": 5.5,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-04",
+      "hour_meter_start": 3628.7,
+      "hour_meter_end": 3633.1,
+      "meter_delta": 4.4,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-07",
+      "hour_meter_start": 1237.1,
+      "hour_meter_end": 1242.8,
+      "meter_delta": 5.7,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-08",
+      "hour_meter_start": 4727.2,
+      "hour_meter_end": 4733.2,
+      "meter_delta": 6.0,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-10",
+      "hour_meter_start": 2189.4,
+      "hour_meter_end": 2194.3,
+      "meter_delta": 4.9,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-11",
+      "hour_meter_start": 1473.4,
+      "hour_meter_end": 1481.2,
+      "meter_delta": 7.8,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-12",
+      "hour_meter_start": 1632.6,
+      "hour_meter_end": 1640.4,
+      "meter_delta": 7.8,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-13",
+      "hour_meter_start": 2203.9,
+      "hour_meter_end": 2209.1,
+      "meter_delta": 5.2,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-16",
+      "hour_meter_start": 1586.0,
+      "hour_meter_end": 1588.1,
+      "meter_delta": 2.1,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-17",
+      "hour_meter_start": 3618.8,
+      "hour_meter_end": 3623.5,
+      "meter_delta": 4.7,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-18",
+      "hour_meter_start": 2964.0,
+      "hour_meter_end": 2968.7,
+      "meter_delta": 4.7,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-19",
+      "hour_meter_start": 4202.2,
+      "hour_meter_end": 4204.8,
+      "meter_delta": 2.6,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-20",
+      "hour_meter_start": 2031.6,
+      "hour_meter_end": 2036.4,
+      "meter_delta": 4.8,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-21",
+      "hour_meter_start": 2090.9,
+      "hour_meter_end": 2093.3,
+      "meter_delta": 2.4,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-22",
+      "hour_meter_start": 3356.5,
+      "hour_meter_end": 3362.0,
+      "meter_delta": 5.5,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-23",
+      "hour_meter_start": 3997.2,
+      "hour_meter_end": 4001.4,
+      "meter_delta": 4.2,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-24",
+      "hour_meter_start": 4416.0,
+      "hour_meter_end": 4423.2,
+      "meter_delta": 7.2,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-25",
+      "hour_meter_start": 2258.2,
+      "hour_meter_end": 2262.9,
+      "meter_delta": 4.7,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-26",
+      "hour_meter_start": 1203.3,
+      "hour_meter_end": 1209.6,
+      "meter_delta": 6.3,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-002",
+      "date": "2026-02-28",
+      "hour_meter_start": 3092.6,
+      "hour_meter_end": 3096.4,
+      "meter_delta": 3.8,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-01-31",
+      "hour_meter_start": 2030.8,
+      "hour_meter_end": 2036.2,
+      "meter_delta": 5.4,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-01",
+      "hour_meter_start": 3919.7,
+      "hour_meter_end": 3926.3,
+      "meter_delta": 6.6,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-02",
+      "hour_meter_start": 1195.0,
+      "hour_meter_end": 1197.4,
+      "meter_delta": 2.4,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-04",
+      "hour_meter_start": 2848.8,
+      "hour_meter_end": 2855.2,
+      "meter_delta": 6.4,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-05",
+      "hour_meter_start": 2455.8,
+      "hour_meter_end": 2459.6,
+      "meter_delta": 3.8,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-06",
+      "hour_meter_start": 4994.1,
+      "hour_meter_end": 4996.7,
+      "meter_delta": 2.6,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-08",
+      "hour_meter_start": 1108.8,
+      "hour_meter_end": 1112.4,
+      "meter_delta": 3.6,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-09",
+      "hour_meter_start": 3927.7,
+      "hour_meter_end": 3935.6,
+      "meter_delta": 7.9,
+      "photo_count": 5,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-11",
+      "hour_meter_start": 4246.3,
+      "hour_meter_end": 4251.8,
+      "meter_delta": 5.5,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-12",
+      "hour_meter_start": 1720.6,
+      "hour_meter_end": 1726.7,
+      "meter_delta": 6.1,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-13",
+      "hour_meter_start": 2128.3,
+      "hour_meter_end": 2133.0,
+      "meter_delta": 4.7,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-14",
+      "hour_meter_start": 3377.0,
+      "hour_meter_end": 3383.9,
+      "meter_delta": 6.9,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-15",
+      "hour_meter_start": 2344.8,
+      "hour_meter_end": 2349.3,
+      "meter_delta": 4.5,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-16",
+      "hour_meter_start": 2126.5,
+      "hour_meter_end": 2133.3,
+      "meter_delta": 6.8,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-17",
+      "hour_meter_start": 2776.4,
+      "hour_meter_end": 2781.6,
+      "meter_delta": 5.2,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-18",
+      "hour_meter_start": 4440.0,
+      "hour_meter_end": 4445.7,
+      "meter_delta": 5.7,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-19",
+      "hour_meter_start": 3208.7,
+      "hour_meter_end": 3213.0,
+      "meter_delta": 4.3,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-20",
+      "hour_meter_start": 4014.5,
+      "hour_meter_end": 4022.1,
+      "meter_delta": 7.6,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-22",
+      "hour_meter_start": 3035.2,
+      "hour_meter_end": 3041.0,
+      "meter_delta": 5.8,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-23",
+      "hour_meter_start": 3656.8,
+      "hour_meter_end": 3659.3,
+      "meter_delta": 2.5,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-24",
+      "hour_meter_start": 3240.4,
+      "hour_meter_end": 3243.7,
+      "meter_delta": 3.3,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-25",
+      "hour_meter_start": 4572.0,
+      "hour_meter_end": 4575.9,
+      "meter_delta": 3.9,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-26",
+      "hour_meter_start": 1775.0,
+      "hour_meter_end": 1778.0,
+      "meter_delta": 3.0,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-003",
+      "date": "2026-02-27",
+      "hour_meter_start": 2612.1,
+      "hour_meter_end": 2618.4,
+      "meter_delta": 6.3,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-01-30",
+      "hour_meter_start": 3796.3,
+      "hour_meter_end": 3800.9,
+      "meter_delta": 4.6,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-01-31",
+      "hour_meter_start": 1918.3,
+      "hour_meter_end": 1921.7,
+      "meter_delta": 3.4,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-01",
+      "hour_meter_start": 1193.7,
+      "hour_meter_end": 1198.9,
+      "meter_delta": 5.2,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-02",
+      "hour_meter_start": 1323.2,
+      "hour_meter_end": 1328.6,
+      "meter_delta": 5.4,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-03",
+      "hour_meter_start": 1121.7,
+      "hour_meter_end": 1123.7,
+      "meter_delta": 2.0,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-04",
+      "hour_meter_start": 2330.8,
+      "hour_meter_end": 2337.5,
+      "meter_delta": 6.7,
+      "photo_count": 6,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-05",
+      "hour_meter_start": 1423.5,
+      "hour_meter_end": 1428.4,
+      "meter_delta": 4.9,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-06",
+      "hour_meter_start": 4580.7,
+      "hour_meter_end": 4588.0,
+      "meter_delta": 7.3,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-07",
+      "hour_meter_start": 1015.3,
+      "hour_meter_end": 1017.7,
+      "meter_delta": 2.4,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-08",
+      "hour_meter_start": 1223.5,
+      "hour_meter_end": 1230.9,
+      "meter_delta": 7.4,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-09",
+      "hour_meter_start": 2618.3,
+      "hour_meter_end": 2621.7,
+      "meter_delta": 3.4,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-10",
+      "hour_meter_start": 2078.8,
+      "hour_meter_end": 2083.6,
+      "meter_delta": 4.8,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-12",
+      "hour_meter_start": 4096.6,
+      "hour_meter_end": 4104.2,
+      "meter_delta": 7.6,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-13",
+      "hour_meter_start": 2360.8,
+      "hour_meter_end": 2364.0,
+      "meter_delta": 3.2,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-14",
+      "hour_meter_start": 3031.1,
+      "hour_meter_end": 3038.3,
+      "meter_delta": 7.2,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-15",
+      "hour_meter_start": 4301.8,
+      "hour_meter_end": 4305.4,
+      "meter_delta": 3.6,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-17",
+      "hour_meter_start": 2130.7,
+      "hour_meter_end": 2134.0,
+      "meter_delta": 3.3,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-18",
+      "hour_meter_start": 3952.3,
+      "hour_meter_end": 3957.2,
+      "meter_delta": 4.9,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-20",
+      "hour_meter_start": 3205.6,
+      "hour_meter_end": 3208.2,
+      "meter_delta": 2.6,
+      "photo_count": 6,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-21",
+      "hour_meter_start": 3584.5,
+      "hour_meter_end": 3587.3,
+      "meter_delta": 2.8,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-22",
+      "hour_meter_start": 2299.7,
+      "hour_meter_end": 2307.3,
+      "meter_delta": 7.6,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-23",
+      "hour_meter_start": 4322.3,
+      "hour_meter_end": 4329.9,
+      "meter_delta": 7.6,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-24",
+      "hour_meter_start": 1678.5,
+      "hour_meter_end": 1683.2,
+      "meter_delta": 4.7,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-25",
+      "hour_meter_start": 4979.0,
+      "hour_meter_end": 4981.4,
+      "meter_delta": 2.4,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-26",
+      "hour_meter_start": 4538.4,
+      "hour_meter_end": 4545.2,
+      "meter_delta": 6.8,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-27",
+      "hour_meter_start": 3593.7,
+      "hour_meter_end": 3600.8,
+      "meter_delta": 7.1,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-004",
+      "date": "2026-02-28",
+      "hour_meter_start": 4021.7,
+      "hour_meter_end": 4028.1,
+      "meter_delta": 6.4,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-01-31",
+      "hour_meter_start": 3577.2,
+      "hour_meter_end": 3584.5,
+      "meter_delta": 7.3,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-01",
+      "hour_meter_start": 3975.2,
+      "hour_meter_end": 3978.7,
+      "meter_delta": 3.5,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-02",
+      "hour_meter_start": 3750.3,
+      "hour_meter_end": 3758.1,
+      "meter_delta": 7.8,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-03",
+      "hour_meter_start": 1106.6,
+      "hour_meter_end": 1112.4,
+      "meter_delta": 5.8,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-04",
+      "hour_meter_start": 4782.5,
+      "hour_meter_end": 4785.5,
+      "meter_delta": 3.0,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-05",
+      "hour_meter_start": 3459.2,
+      "hour_meter_end": 3463.1,
+      "meter_delta": 3.9,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-06",
+      "hour_meter_start": 2595.4,
+      "hour_meter_end": 2600.0,
+      "meter_delta": 4.6,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-07",
+      "hour_meter_start": 1093.3,
+      "hour_meter_end": 1097.5,
+      "meter_delta": 4.2,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-08",
+      "hour_meter_start": 4348.5,
+      "hour_meter_end": 4356.3,
+      "meter_delta": 7.8,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-09",
+      "hour_meter_start": 1807.1,
+      "hour_meter_end": 1813.3,
+      "meter_delta": 6.2,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-10",
+      "hour_meter_start": 1570.8,
+      "hour_meter_end": 1575.2,
+      "meter_delta": 4.4,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-11",
+      "hour_meter_start": 3154.3,
+      "hour_meter_end": 3159.9,
+      "meter_delta": 5.6,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-12",
+      "hour_meter_start": 2946.0,
+      "hour_meter_end": 2952.7,
+      "meter_delta": 6.7,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-13",
+      "hour_meter_start": 3481.4,
+      "hour_meter_end": 3486.8,
+      "meter_delta": 5.4,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-15",
+      "hour_meter_start": 3373.5,
+      "hour_meter_end": 3379.6,
+      "meter_delta": 6.1,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-16",
+      "hour_meter_start": 1757.3,
+      "hour_meter_end": 1762.3,
+      "meter_delta": 5.0,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-17",
+      "hour_meter_start": 3079.4,
+      "hour_meter_end": 3082.1,
+      "meter_delta": 2.7,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-18",
+      "hour_meter_start": 2396.0,
+      "hour_meter_end": 2403.6,
+      "meter_delta": 7.6,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-20",
+      "hour_meter_start": 4083.5,
+      "hour_meter_end": 4089.6,
+      "meter_delta": 6.1,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-21",
+      "hour_meter_start": 2072.2,
+      "hour_meter_end": 2074.9,
+      "meter_delta": 2.7,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-22",
+      "hour_meter_start": 3157.7,
+      "hour_meter_end": 3165.0,
+      "meter_delta": 7.3,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-24",
+      "hour_meter_start": 4477.4,
+      "hour_meter_end": 4482.5,
+      "meter_delta": 5.1,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-25",
+      "hour_meter_start": 3838.8,
+      "hour_meter_end": 3842.4,
+      "meter_delta": 3.6,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-26",
+      "hour_meter_start": 3364.8,
+      "hour_meter_end": 3368.3,
+      "meter_delta": 3.5,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-27",
+      "hour_meter_start": 1274.2,
+      "hour_meter_end": 1280.1,
+      "meter_delta": 5.9,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-005",
+      "date": "2026-02-28",
+      "hour_meter_start": 3825.4,
+      "hour_meter_end": 3829.8,
+      "meter_delta": 4.4,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-01-31",
+      "hour_meter_start": 1475.3,
+      "hour_meter_end": 1479.6,
+      "meter_delta": 4.3,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-02",
+      "hour_meter_start": 3244.6,
+      "hour_meter_end": 3251.9,
+      "meter_delta": 7.3,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-03",
+      "hour_meter_start": 4689.9,
+      "hour_meter_end": 4694.0,
+      "meter_delta": 4.1,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-04",
+      "hour_meter_start": 4800.3,
+      "hour_meter_end": 4808.1,
+      "meter_delta": 7.8,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-05",
+      "hour_meter_start": 1311.3,
+      "hour_meter_end": 1313.6,
+      "meter_delta": 2.3,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-06",
+      "hour_meter_start": 1133.0,
+      "hour_meter_end": 1139.3,
+      "meter_delta": 6.3,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-07",
+      "hour_meter_start": 3358.1,
+      "hour_meter_end": 3360.4,
+      "meter_delta": 2.3,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-08",
+      "hour_meter_start": 3931.7,
+      "hour_meter_end": 3939.3,
+      "meter_delta": 7.6,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-09",
+      "hour_meter_start": 4680.2,
+      "hour_meter_end": 4686.0,
+      "meter_delta": 5.8,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-10",
+      "hour_meter_start": 3952.1,
+      "hour_meter_end": 3958.3,
+      "meter_delta": 6.2,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-12",
+      "hour_meter_start": 3829.8,
+      "hour_meter_end": 3833.7,
+      "meter_delta": 3.9,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-13",
+      "hour_meter_start": 3115.0,
+      "hour_meter_end": 3117.8,
+      "meter_delta": 2.8,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-15",
+      "hour_meter_start": 3919.5,
+      "hour_meter_end": 3922.3,
+      "meter_delta": 2.8,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-16",
+      "hour_meter_start": 4815.9,
+      "hour_meter_end": 4820.0,
+      "meter_delta": 4.1,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-17",
+      "hour_meter_start": 4266.6,
+      "hour_meter_end": 4274.4,
+      "meter_delta": 7.8,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-18",
+      "hour_meter_start": 1889.7,
+      "hour_meter_end": 1896.3,
+      "meter_delta": 6.6,
+      "photo_count": 5,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-19",
+      "hour_meter_start": 3430.9,
+      "hour_meter_end": 3434.1,
+      "meter_delta": 3.2,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-20",
+      "hour_meter_start": 4758.6,
+      "hour_meter_end": 4761.4,
+      "meter_delta": 2.8,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-21",
+      "hour_meter_start": 1377.4,
+      "hour_meter_end": 1385.0,
+      "meter_delta": 7.6,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-22",
+      "hour_meter_start": 4912.8,
+      "hour_meter_end": 4917.9,
+      "meter_delta": 5.1,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-24",
+      "hour_meter_start": 2920.8,
+      "hour_meter_end": 2928.1,
+      "meter_delta": 7.3,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-25",
+      "hour_meter_start": 2677.0,
+      "hour_meter_end": 2680.8,
+      "meter_delta": 3.8,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-26",
+      "hour_meter_start": 2506.3,
+      "hour_meter_end": 2510.4,
+      "meter_delta": 4.1,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-27",
+      "hour_meter_start": 2628.6,
+      "hour_meter_end": 2632.6,
+      "meter_delta": 4.0,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-006",
+      "date": "2026-02-28",
+      "hour_meter_start": 1119.1,
+      "hour_meter_end": 1122.7,
+      "meter_delta": 3.6,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-01-30",
+      "hour_meter_start": 1344.5,
+      "hour_meter_end": 1348.3,
+      "meter_delta": 3.8,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-01-31",
+      "hour_meter_start": 1813.1,
+      "hour_meter_end": 1817.5,
+      "meter_delta": 4.4,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-01",
+      "hour_meter_start": 3640.1,
+      "hour_meter_end": 3646.0,
+      "meter_delta": 5.9,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-03",
+      "hour_meter_start": 2810.2,
+      "hour_meter_end": 2816.3,
+      "meter_delta": 6.1,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-04",
+      "hour_meter_start": 1484.5,
+      "hour_meter_end": 1491.9,
+      "meter_delta": 7.4,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-05",
+      "hour_meter_start": 4544.1,
+      "hour_meter_end": 4550.4,
+      "meter_delta": 6.3,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-06",
+      "hour_meter_start": 4853.5,
+      "hour_meter_end": 4858.1,
+      "meter_delta": 4.6,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-07",
+      "hour_meter_start": 3210.7,
+      "hour_meter_end": 3214.3,
+      "meter_delta": 3.6,
+      "photo_count": 6,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-08",
+      "hour_meter_start": 2333.1,
+      "hour_meter_end": 2339.5,
+      "meter_delta": 6.4,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-09",
+      "hour_meter_start": 2014.5,
+      "hour_meter_end": 2021.5,
+      "meter_delta": 7.0,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-10",
+      "hour_meter_start": 4281.4,
+      "hour_meter_end": 4284.6,
+      "meter_delta": 3.2,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-11",
+      "hour_meter_start": 1080.2,
+      "hour_meter_end": 1085.6,
+      "meter_delta": 5.4,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-13",
+      "hour_meter_start": 3885.8,
+      "hour_meter_end": 3888.2,
+      "meter_delta": 2.4,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-14",
+      "hour_meter_start": 2476.7,
+      "hour_meter_end": 2480.2,
+      "meter_delta": 3.5,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-16",
+      "hour_meter_start": 4678.5,
+      "hour_meter_end": 4681.4,
+      "meter_delta": 2.9,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-17",
+      "hour_meter_start": 3759.3,
+      "hour_meter_end": 3764.1,
+      "meter_delta": 4.8,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-18",
+      "hour_meter_start": 3177.2,
+      "hour_meter_end": 3183.7,
+      "meter_delta": 6.5,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-19",
+      "hour_meter_start": 3831.7,
+      "hour_meter_end": 3835.4,
+      "meter_delta": 3.7,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-20",
+      "hour_meter_start": 3399.5,
+      "hour_meter_end": 3406.0,
+      "meter_delta": 6.5,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-21",
+      "hour_meter_start": 2759.6,
+      "hour_meter_end": 2762.0,
+      "meter_delta": 2.4,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-22",
+      "hour_meter_start": 2933.8,
+      "hour_meter_end": 2936.7,
+      "meter_delta": 2.9,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-23",
+      "hour_meter_start": 4768.0,
+      "hour_meter_end": 4773.4,
+      "meter_delta": 5.4,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-24",
+      "hour_meter_start": 1217.2,
+      "hour_meter_end": 1223.4,
+      "meter_delta": 6.2,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-25",
+      "hour_meter_start": 4199.7,
+      "hour_meter_end": 4207.3,
+      "meter_delta": 7.6,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-26",
+      "hour_meter_start": 1396.9,
+      "hour_meter_end": 1399.1,
+      "meter_delta": 2.2,
+      "photo_count": 5,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-27",
+      "hour_meter_start": 3649.6,
+      "hour_meter_end": 3653.3,
+      "meter_delta": 3.7,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-007",
+      "date": "2026-02-28",
+      "hour_meter_start": 3038.5,
+      "hour_meter_end": 3044.5,
+      "meter_delta": 6.0,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-01-30",
+      "hour_meter_start": 2207.2,
+      "hour_meter_end": 2214.9,
+      "meter_delta": 7.7,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-01-31",
+      "hour_meter_start": 2312.9,
+      "hour_meter_end": 2317.0,
+      "meter_delta": 4.1,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-01",
+      "hour_meter_start": 2520.9,
+      "hour_meter_end": 2526.4,
+      "meter_delta": 5.5,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-02",
+      "hour_meter_start": 1863.5,
+      "hour_meter_end": 1868.9,
+      "meter_delta": 5.4,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-03",
+      "hour_meter_start": 1555.8,
+      "hour_meter_end": 1561.3,
+      "meter_delta": 5.5,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-04",
+      "hour_meter_start": 1855.3,
+      "hour_meter_end": 1859.8,
+      "meter_delta": 4.5,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-06",
+      "hour_meter_start": 4435.5,
+      "hour_meter_end": 4442.7,
+      "meter_delta": 7.2,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-07",
+      "hour_meter_start": 4282.8,
+      "hour_meter_end": 4288.4,
+      "meter_delta": 5.6,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-08",
+      "hour_meter_start": 4280.6,
+      "hour_meter_end": 4284.2,
+      "meter_delta": 3.6,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-09",
+      "hour_meter_start": 1006.3,
+      "hour_meter_end": 1009.3,
+      "meter_delta": 3.0,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-11",
+      "hour_meter_start": 3362.6,
+      "hour_meter_end": 3368.5,
+      "meter_delta": 5.9,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-12",
+      "hour_meter_start": 4226.5,
+      "hour_meter_end": 4230.3,
+      "meter_delta": 3.8,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-13",
+      "hour_meter_start": 1036.3,
+      "hour_meter_end": 1041.0,
+      "meter_delta": 4.7,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-14",
+      "hour_meter_start": 3242.5,
+      "hour_meter_end": 3249.3,
+      "meter_delta": 6.8,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-15",
+      "hour_meter_start": 4862.2,
+      "hour_meter_end": 4864.7,
+      "meter_delta": 2.5,
+      "photo_count": 2,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-16",
+      "hour_meter_start": 2411.0,
+      "hour_meter_end": 2413.6,
+      "meter_delta": 2.6,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-17",
+      "hour_meter_start": 3841.1,
+      "hour_meter_end": 3846.6,
+      "meter_delta": 5.5,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-18",
+      "hour_meter_start": 3049.0,
+      "hour_meter_end": 3055.4,
+      "meter_delta": 6.4,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-19",
+      "hour_meter_start": 2208.6,
+      "hour_meter_end": 2214.9,
+      "meter_delta": 6.3,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-20",
+      "hour_meter_start": 2676.9,
+      "hour_meter_end": 2683.6,
+      "meter_delta": 6.7,
+      "photo_count": 2,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-22",
+      "hour_meter_start": 3837.4,
+      "hour_meter_end": 3842.1,
+      "meter_delta": 4.7,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-24",
+      "hour_meter_start": 2821.8,
+      "hour_meter_end": 2824.8,
+      "meter_delta": 3.0,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-25",
+      "hour_meter_start": 2714.3,
+      "hour_meter_end": 2719.6,
+      "meter_delta": 5.3,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-26",
+      "hour_meter_start": 1328.6,
+      "hour_meter_end": 1336.6,
+      "meter_delta": 8.0,
+      "photo_count": 7,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-27",
+      "hour_meter_start": 1518.8,
+      "hour_meter_end": 1524.1,
+      "meter_delta": 5.3,
+      "photo_count": 4,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-008",
+      "date": "2026-02-28",
+      "hour_meter_start": 1146.0,
+      "hour_meter_end": 1153.5,
+      "meter_delta": 7.5,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-01-31",
+      "hour_meter_start": 4171.0,
+      "hour_meter_end": 4176.1,
+      "meter_delta": 5.1,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-01",
+      "hour_meter_start": 2472.1,
+      "hour_meter_end": 2476.9,
+      "meter_delta": 4.8,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-02",
+      "hour_meter_start": 3082.8,
+      "hour_meter_end": 3090.1,
+      "meter_delta": 7.3,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-03",
+      "hour_meter_start": 4135.0,
+      "hour_meter_end": 4139.8,
+      "meter_delta": 4.8,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-04",
+      "hour_meter_start": 1179.6,
+      "hour_meter_end": 1185.4,
+      "meter_delta": 5.8,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-05",
+      "hour_meter_start": 1551.6,
+      "hour_meter_end": 1557.5,
+      "meter_delta": 5.9,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-06",
+      "hour_meter_start": 2884.4,
+      "hour_meter_end": 2890.1,
+      "meter_delta": 5.7,
+      "photo_count": 5,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-07",
+      "hour_meter_start": 3651.2,
+      "hour_meter_end": 3654.4,
+      "meter_delta": 3.2,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-08",
+      "hour_meter_start": 1406.3,
+      "hour_meter_end": 1411.1,
+      "meter_delta": 4.8,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-09",
+      "hour_meter_start": 4846.6,
+      "hour_meter_end": 4850.0,
+      "meter_delta": 3.4,
+      "photo_count": 5,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-12",
+      "hour_meter_start": 3938.5,
+      "hour_meter_end": 3945.4,
+      "meter_delta": 6.9,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-13",
+      "hour_meter_start": 3255.9,
+      "hour_meter_end": 3262.2,
+      "meter_delta": 6.3,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-15",
+      "hour_meter_start": 3458.1,
+      "hour_meter_end": 3461.9,
+      "meter_delta": 3.8,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-16",
+      "hour_meter_start": 4288.3,
+      "hour_meter_end": 4292.8,
+      "meter_delta": 4.5,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-17",
+      "hour_meter_start": 1028.7,
+      "hour_meter_end": 1034.6,
+      "meter_delta": 5.9,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-18",
+      "hour_meter_start": 2581.0,
+      "hour_meter_end": 2583.9,
+      "meter_delta": 2.9,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-19",
+      "hour_meter_start": 4601.7,
+      "hour_meter_end": 4608.3,
+      "meter_delta": 6.6,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-20",
+      "hour_meter_start": 3051.2,
+      "hour_meter_end": 3054.7,
+      "meter_delta": 3.5,
+      "photo_count": 8,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-21",
+      "hour_meter_start": 4897.2,
+      "hour_meter_end": 4903.7,
+      "meter_delta": 6.5,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-22",
+      "hour_meter_start": 3400.5,
+      "hour_meter_end": 3407.6,
+      "meter_delta": 7.1,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-23",
+      "hour_meter_start": 4159.0,
+      "hour_meter_end": 4163.6,
+      "meter_delta": 4.6,
+      "photo_count": 7,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-26",
+      "hour_meter_start": 4823.7,
+      "hour_meter_end": 4826.1,
+      "meter_delta": 2.4,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-27",
+      "hour_meter_start": 3870.5,
+      "hour_meter_end": 3874.2,
+      "meter_delta": 3.7,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-009",
+      "date": "2026-02-28",
+      "hour_meter_start": 3927.8,
+      "hour_meter_end": 3934.9,
+      "meter_delta": 7.1,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-01-30",
+      "hour_meter_start": 3040.1,
+      "hour_meter_end": 3045.8,
+      "meter_delta": 5.7,
+      "photo_count": 3,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-01-31",
+      "hour_meter_start": 2004.7,
+      "hour_meter_end": 2009.9,
+      "meter_delta": 5.2,
+      "photo_count": 7,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-01",
+      "hour_meter_start": 2760.3,
+      "hour_meter_end": 2767.6,
+      "meter_delta": 7.3,
+      "photo_count": 6,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-02",
+      "hour_meter_start": 2424.1,
+      "hour_meter_end": 2426.3,
+      "meter_delta": 2.2,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-03",
+      "hour_meter_start": 4984.0,
+      "hour_meter_end": 4991.5,
+      "meter_delta": 7.5,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-06",
+      "hour_meter_start": 4595.4,
+      "hour_meter_end": 4602.3,
+      "meter_delta": 6.9,
+      "photo_count": 3,
+      "issues_count": 1,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-07",
+      "hour_meter_start": 3564.5,
+      "hour_meter_end": 3572.1,
+      "meter_delta": 7.6,
+      "photo_count": 8,
+      "issues_count": 2,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-08",
+      "hour_meter_start": 1790.9,
+      "hour_meter_end": 1794.2,
+      "meter_delta": 3.3,
+      "photo_count": 4,
+      "issues_count": 1,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-09",
+      "hour_meter_start": 3330.6,
+      "hour_meter_end": 3337.7,
+      "meter_delta": 7.1,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-10",
+      "hour_meter_start": 2255.4,
+      "hour_meter_end": 2260.3,
+      "meter_delta": 4.9,
+      "photo_count": 4,
+      "issues_count": 0,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-11",
+      "hour_meter_start": 4158.7,
+      "hour_meter_end": 4161.7,
+      "meter_delta": 3.0,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-12",
+      "hour_meter_start": 3493.2,
+      "hour_meter_end": 3496.7,
+      "meter_delta": 3.5,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-13",
+      "hour_meter_start": 2143.8,
+      "hour_meter_end": 2146.6,
+      "meter_delta": 2.8,
+      "photo_count": 3,
+      "issues_count": 2,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-14",
+      "hour_meter_start": 4384.5,
+      "hour_meter_end": 4388.2,
+      "meter_delta": 3.7,
+      "photo_count": 3,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-15",
+      "hour_meter_start": 3789.5,
+      "hour_meter_end": 3791.7,
+      "meter_delta": 2.2,
+      "photo_count": 7,
+      "issues_count": 2,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-16",
+      "hour_meter_start": 4798.7,
+      "hour_meter_end": 4803.4,
+      "meter_delta": 4.7,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-17",
+      "hour_meter_start": 1410.6,
+      "hour_meter_end": 1417.5,
+      "meter_delta": 6.9,
+      "photo_count": 8,
+      "issues_count": 1,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-18",
+      "hour_meter_start": 3920.7,
+      "hour_meter_end": 3926.6,
+      "meter_delta": 5.9,
+      "photo_count": 6,
+      "issues_count": 1,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-19",
+      "hour_meter_start": 4638.1,
+      "hour_meter_end": 4640.5,
+      "meter_delta": 2.4,
+      "photo_count": 6,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-20",
+      "hour_meter_start": 3654.2,
+      "hour_meter_end": 3658.1,
+      "meter_delta": 3.9,
+      "photo_count": 4,
+      "issues_count": 3,
+      "inspector_id": "INS-002"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-21",
+      "hour_meter_start": 4674.6,
+      "hour_meter_end": 4679.4,
+      "meter_delta": 4.8,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-22",
+      "hour_meter_start": 3294.1,
+      "hour_meter_end": 3302.0,
+      "meter_delta": 7.9,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-25",
+      "hour_meter_start": 3703.4,
+      "hour_meter_end": 3707.4,
+      "meter_delta": 4.0,
+      "photo_count": 2,
+      "issues_count": 1,
+      "inspector_id": "INS-003"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-26",
+      "hour_meter_start": 2026.6,
+      "hour_meter_end": 2030.2,
+      "meter_delta": 3.6,
+      "photo_count": 5,
+      "issues_count": 0,
+      "inspector_id": "INS-001"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-27",
+      "hour_meter_start": 1851.3,
+      "hour_meter_end": 1858.2,
+      "meter_delta": 6.9,
+      "photo_count": 8,
+      "issues_count": 3,
+      "inspector_id": "INS-004"
+    },
+    {
+      "equipment_id": "EQ-010",
+      "date": "2026-02-28",
+      "hour_meter_start": 4100.8,
+      "hour_meter_end": 4103.2,
+      "meter_delta": 2.4,
+      "photo_count": 2,
+      "issues_count": 3,
+      "inspector_id": "INS-005"
+    }
+  ]
+}
