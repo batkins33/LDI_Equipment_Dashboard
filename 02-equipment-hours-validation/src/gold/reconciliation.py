@@ -196,7 +196,7 @@ class GoldReconciler:
                 UNION
                 SELECT equipment_id, date_id FROM f_inspection_equipment_day WHERE 1=1 {where}
                 UNION
-                SELECT h.equipment_id, h.work_date AS date_id
+                SELECT eh.equipment_id, h.work_date AS date_id
                 FROM f_timecard_equipment_hours eh
                 JOIN f_timecard_header h ON h.timecard_id = eh.timecard_id
                 WHERE 1=1
