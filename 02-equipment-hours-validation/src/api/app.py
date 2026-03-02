@@ -5,7 +5,7 @@ from pathlib import Path
 
 from flask import Flask
 
-from api.routes import register_routes
+from .routes import register_routes
 
 
 def _apply_dashboard_views(db_path: str) -> None:
